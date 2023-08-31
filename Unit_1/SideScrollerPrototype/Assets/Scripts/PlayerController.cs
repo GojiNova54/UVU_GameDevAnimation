@@ -9,13 +9,13 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     private bool isGrounded;
+    private Quaternion initialRotation;
     private Vector2 moveInput;
-
-    public InputAction playerControl;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        initialRotation = transform.rotation;
     }
 
     private void Update()
@@ -24,16 +24,25 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics.Raycast(transform.position, Vector3.down, 0.1f, groundLayer);
 
         // Get move input using the Input System
-        moveInput = Keyboard.current.dKey.isPressed ? new Vector2(1, 0) : Keyboard.current.aKey.isPressed ? new Vector2(-1, 0) : Vector2.zero;
+        moveInput = new Vector2(Keyboard.current.dKey.isPressed ? 1 : Keyboard.current.aKey.isPressed ? -1 : 0, 0);
 
         // Player movement
         Vector3 moveDirection = new Vector3(moveInput.x, 0.0f, 0.0f);
         rb.velocity = new Vector3(moveDirection.x * moveSpeed, rb.velocity.y, 0.0f);
 
         // Jumping
-        if (isGrounded && Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                rb.velocity = new Vector3(rb.velocity.x, Mathf.Sqrt(2 * jumpForce * Mathf.Abs(Physics.gravity.y)), 0);
+                rb.angularVelocity = Vector3.zero; // Prevent rotation during jump
+            }
+        }
+        else
+        {
+            // Keep the initial rotation when in mid-air
+            transform.rotation = initialRotation;
         }
     }
 }
