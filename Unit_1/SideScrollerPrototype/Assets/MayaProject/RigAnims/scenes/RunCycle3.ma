@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: RunCycle3.ma
-//Last modified: Wed, Sep 27, 2023 03:21:28 PM
+//Last modified: Wed, Sep 27, 2023 04:28:33 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Walker_Rig" -rfn "Ultimate_Walker_RigRN" -op "v=0;p=17;f=0"
 		 -typ "mayaAscii" "D:/GitRepos/UVU_GameDev1_Fall2023/Unit_1/SideScrollerPrototype/Assets/MayaProject/RigAnims//scenes/Ultimate_Walker_Rig.ma";
@@ -15,18 +15,18 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "D3D740EA-402D-2ED5-3902-2A8DFCB200CC";
+fileInfo "UUID" "B0D17F5A-4EB9-C085-ADC9-C6B6C101DBE3";
 createNode transform -s -n "persp";
 	rename -uid "51106552-4220-5C3B-AD67-19BFF6F22D1A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.5304843458702813 4.9347319046649947 -15.141012003574453 ;
-	setAttr ".r" -type "double3" -11.738352729591641 -160.99999999996581 0 ;
+	setAttr ".t" -type "double3" -17.563129915644485 3.5016355935487793 -9.9273258872966181 ;
+	setAttr ".r" -type "double3" -5.7383527295903356 -121.39999999992176 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BA0FEA40-45FF-15C0-9EC9-45AB475A3409";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".fcp" 10000000;
-	setAttr ".coi" 17.175745480053408;
+	setAttr ".coi" 20.614768735283313;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -85,7 +85,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode fosterParent -n "Ultimate_Walker_RigRNfosterParent1";
-	rename -uid "D9777189-463D-3478-1D66-11A834CB0FFB";
+	rename -uid "FDE773C4-4A56-C659-D000-4D9B4A8913E8";
 createNode mesh -n "Ultimate_Walker_Rig:polySurfaceShape17" -p "Ultimate_Walker_RigRNfosterParent1";
 	rename -uid "3FECD35E-4312-D2AA-CFB6-649A3EA430F2";
 	setAttr -k off ".v";
@@ -3446,11 +3446,10 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "3FE0CEF7-40A9-715C-45AD-C88B1B63672D";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 180 -ast 1 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 180 -ast 0 -aet 200 ";
 	setAttr ".st" 6;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
