@@ -27,7 +27,7 @@ public class PickupController : MonoBehaviour
         // Play the pickup sound from the pickup's AudioSource
         if (pickupAudioSource != null)
         {
-            pickupAudioSource.Play();
+           // pickupAudioSource.Play();
         }
 
         // Disable the Renderer component to make the object invisible

@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController controller;
     private Animator anim;
+    private bool isJumping;
+    private bool isFalling;
 
     private void Start()
     {
@@ -33,13 +35,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
+        CheckGround(); // Check if the player is grounded
 
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
-        
         float moveX = Input.GetAxis("Horizontal");
 
         moveDirection = new Vector3(moveX, 0, 0);
@@ -93,8 +90,61 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
-        anim.SetTrigger("Jump");
-        
+        anim.SetBool("isJumping", true);
+        isJumping = true;
+    }
+
+    private void CheckGround()
+    {
+        isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
+
+        if (!isJumping && isFalling && isGrounded)
+        {
+            // Transition to Landing animation
+            anim.SetBool("isLanding", true);
+            isFalling = false;
+        }
+        else if (isGrounded)
+        {
+            if (isFalling)
+            {
+                // Transition to Landing animation (if player was previously falling)
+                anim.SetBool("isLanding", true);
+                isFalling = false;
+            }
+            else if (isJumping)
+            {
+                // Transition to Idle or Walk animation when landing after a jump
+                anim.SetBool("isJumping", false);
+                isJumping = false;
+                if (moveDirection != Vector3.zero)
+                {
+                    Walk();
+                }
+                else
+                {
+                    Idle();
+                }
+            }
+        }
+        else
+        {
+            if (!isJumping && velocity.y < 0)
+            {
+                // Transition to Falling animation when starting to fall
+                anim.SetBool("isFalling", true);
+                isFalling = true;
+            }
+        }
     }
 }
+
+
+
+
+
+
+
+
+
 

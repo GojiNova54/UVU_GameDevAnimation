@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: RunCycle3.ma
-//Last modified: Thu, Sep 28, 2023 11:27:19 AM
+//Last modified: Fri, Sep 29, 2023 08:42:34 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Walker_Rig" -rfn "Ultimate_Walker_RigRN" -op "v=0;p=17;f=0"
 		 -typ "mayaAscii" "C:/Users/nova7/OneDrive/Desktop/Ultimate_Walker_Rig.ma";
@@ -16,18 +16,18 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "9D1500AC-4FD5-8A4D-787A-B7AA486D0331";
+fileInfo "UUID" "E4F22A37-4183-C471-1BD7-59AE4FE89151";
 createNode transform -s -n "persp";
 	rename -uid "1907A1CD-4144-5172-EF24-56BDBACE41E0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.666216658961913 4.8230466527507065 -12.341445369137237 ;
-	setAttr ".r" -type "double3" -12.338352729484637 141.00000000000583 0 ;
+	setAttr ".t" -type "double3" 13.124314797759245 6.9648912341266067 -11.396433606878887 ;
+	setAttr ".r" -type "double3" -13.538352729484561 123.80000000000543 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9D1F968A-4C80-B335-EF59-F3890B9F3394";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".fcp" 10000000;
-	setAttr ".coi" 14.786666573053578;
+	setAttr ".coi" 17.747335166514048;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
