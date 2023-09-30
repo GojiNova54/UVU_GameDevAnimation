@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private bool isJumping;
     private bool isFalling;
+
+    public UnityEvent onPlayerDeath;
 
     private void Start()
     {
@@ -68,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+        
     }
 
     private void Idle()
@@ -137,6 +141,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
 }
 
 
