@@ -1,0 +1,45 @@
+// Make Selection
+
+// --Needs--
+
+// Determine range x, y, z
+// What is selected? Store as variable
+// Random values within above range
+// How many duplicates?
+
+// --Push Goals--
+
+// Randomize rotation, scale, etc.
+
+// --Workflow--
+
+// Select object(s)
+
+proc placementGenerator(float $xMin, float $xMax, float $yMin, float $yMax, float $zMin, float $zMax, int $numDups)
+{
+    
+    store object(s) name as variable 
+    stringls $sels[] = 'ls -selection'; //(ex: ["rock1", "rock2", "rock3", "rock4", "rock5"])
+
+    //looping through each object selection
+    for($i=0; $i < size($sels); $i++)
+    {   
+        //perform actions for each individual object
+        for($j=0; $j<$numDups; $j++;)
+        {   
+            //duplicate current object
+            string $dups[] = 'duplicate -rr $sels[$i]';
+            string $dup = $dups[0];
+
+            //generate a new x, y, and z value based on range arguments
+            float $randX = '$xMin $xMax'
+            float $randX = '$yMin $yMax'
+            float $randX = '$zMin $zMax'
+            
+            //translate current object to new position
+            xform -worldSpace -translation $randX $randY $randZ $dup;
+        }
+    }
+} 
+
+placementGenerator(-10, 30, -5, 20, -100, 100, 50);
