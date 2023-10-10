@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: LoopingWorldWalk.ma
-//Last modified: Fri, Oct 06, 2023 03:57:23 PM
+//Last modified: Sat, Oct 07, 2023 02:48:27 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Walker_Rig" -rfn "Ultimate_Walker_RigRN" -op "v=0;p=17;f=0"
 		 -typ "mayaAscii" "D:/GitRepos/UVU_GameDev1_Fall2023/Unit_1/SideScrollerPrototype/Assets/MayaProject//RigAnims/scenes/Ultimate_Walker_Rig.ma";
@@ -16,18 +16,18 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "B91ABA5F-4A51-743F-80D0-2EA67649A0FD";
+fileInfo "UUID" "2FAD18E8-482E-4702-9292-958D01421705";
 createNode transform -s -n "persp";
 	rename -uid "783BC17B-4024-3C92-0E4F-AF929D03B597";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 15.467016583732821 6.8261060217751375 -33.60813254422753 ;
-	setAttr ".r" -type "double3" 350.06164726892695 -200.20000000003131 0 ;
+	setAttr ".t" -type "double3" 22.975549957143876 5.1382843143322452 -68.875426323374924 ;
+	setAttr ".r" -type "double3" 348.2616472689221 -201.40000000002345 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "411CC4DF-4A7D-9CF5-A722-8D87F5C9D918";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".fcp" 10000000;
-	setAttr ".coi" 33.818224204837193;
+	setAttr ".coi" 79.99677984513211;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
