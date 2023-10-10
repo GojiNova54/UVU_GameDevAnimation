@@ -15,31 +15,74 @@
 
 // Select object(s)
 
-proc placementGenerator(float $xMin, float $xMax, float $yMin, float $yMax, float $zMin, float $zMax, int $numDups)
+// Placement Generator Function
+global proc placementGenerator(float $xMin, float $xMax, float $yMin, float $yMax, float $zMin, float $zMax, int $numDups)
 {
-    
-    store object(s) name as variable 
-    stringls $sels[] = 'ls -selection'; //(ex: ["rock1", "rock2", "rock3", "rock4", "rock5"])
+    // Get selected object names
+    string $sels[] = `ls -selection`;
 
-    //looping through each object selection
-    for($i=0; $i < size($sels); $i++)
-    {   
-        //perform actions for each individual object
-        for($j=0; $j<$numDups; $j++;)
-        {   
-            //duplicate current object
-            string $dups[] = 'duplicate -rr $sels[$i]';
+    // Loop through each selected object
+    for ($i = 0; $i < size($sels); $i++)
+    {
+        // Perform actions for each individual object
+        for ($j = 0; $j < $numDups; $j++)
+        {
+            // Duplicate current object
+            string $dups[] = `duplicate -rr $sels[$i]`;
             string $dup = $dups[0];
 
-            //generate a new x, y, and z value based on range arguments
-            float $randX = '$xMin $xMax'
-            float $randX = '$yMin $yMax'
-            float $randX = '$zMin $zMax'
-            
-            //translate current object to new position
+            // Generate new random x, y, and z values
+            float $randX = rand($xMin, $xMax);
+            float $randY = rand($yMin, $yMax);
+            float $randZ = rand($zMin, $zMax);
+
+            // Translate current object to the new position
             xform -worldSpace -translation $randX $randY $randZ $dup;
         }
     }
-} 
+}
 
-placementGenerator(-10, 30, -5, 20, -100, 100, 50);
+// UI Function
+global proc createPlacementGeneratorUI()
+{
+    if (`window -exists placementGeneratorUI`)
+        deleteUI placementGeneratorUI;
+
+    // Create a new window
+    window -title "Placement Generator" placementGeneratorUI;
+    columnLayout -adjustableColumn true;
+
+    // Create fields for arguments
+    floatFieldGrp -label "X Min/Max" -numberOfFields 2 -value1 -10 -value2 30 xRange;
+    floatFieldGrp -label "Y Min/Max" -numberOfFields 2 -value1 -5 -value2 20 yRange;
+    floatFieldGrp -label "Z Min/Max" -numberOfFields 2 -value1 -100 -value2 100 zRange;
+    intFieldGrp -label "Number of Duplicates" -value1 50 numDups;
+
+    // Create a button to call the function
+    button -label "Generate" -command "generatePlacement();" generateButton;
+
+    // Show the window
+    showWindow placementGeneratorUI;
+}
+
+// Create a procedure to retrieve UI field values and call placementGenerator
+global proc generatePlacement()
+{
+    float $xMin = `floatFieldGrp -query -value1 xRange`;
+    float $xMax = `floatFieldGrp -query -value2 xRange`;
+    float $yMin = `floatFieldGrp -query -value1 yRange`;
+    float $yMax = `floatFieldGrp -query -value2 yRange`;
+    float $zMin = `floatFieldGrp -query -value1 zRange`;
+    float $zMax = `floatFieldGrp -query -value2 zRange`;
+    int $numDups = `intFieldGrp -query -value1 numDups`;
+
+    placementGenerator($xMin, $xMax, $yMin, $yMax, $zMin, $zMax, $numDups);
+}
+
+// Call the function to create the UI
+createPlacementGeneratorUI();
+
+
+
+
+
