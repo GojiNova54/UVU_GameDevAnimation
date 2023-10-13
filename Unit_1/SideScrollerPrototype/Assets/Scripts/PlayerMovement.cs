@@ -101,12 +101,14 @@ public class PlayerMovement : MonoBehaviour
     private void CheckGround()
     {
         isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
-
+        Debug.Log(isGrounded);
+        
         if (!isJumping && isFalling && isGrounded)
         {
             // Transition to Landing animation
             anim.SetBool("isLanding", true);
             isFalling = false;
+            Debug.Log("isLanding is true");
         }
         else if (isGrounded)
         {
@@ -115,12 +117,14 @@ public class PlayerMovement : MonoBehaviour
                 // Transition to Landing animation (if player was previously falling)
                 anim.SetBool("isLanding", true);
                 isFalling = false;
+                Debug.Log("isFalling is false");
             }
             else if (isJumping)
             {
                 // Transition to Idle or Walk animation when landing after a jump
                 anim.SetBool("isJumping", false);
                 isJumping = false;
+                Debug.Log("isJumping is false");
                 if (moveDirection != Vector3.zero)
                 {
                     Walk();
@@ -138,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
                 // Transition to Falling animation when starting to fall
                 anim.SetBool("isFalling", true);
                 isFalling = true;
+                Debug.Log("isFalling is true");
             }
         }
     }

@@ -1,48 +1,54 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement2 : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
-    public float jumpForce = 10.0f;
-    public LayerMask groundLayer;
+    public float jumpForce = 8.0f;
+    public float gravity = 20.0f;
 
-    private Rigidbody rb;
+    private CharacterController controller;
+    private Vector3 moveDirection = Vector3.zero;
+
     private bool isGrounded;
-    private Quaternion initialRotation;
-    private Vector2 moveInput;
 
-    private void Awake()
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        initialRotation = transform.rotation;
+        controller = GetComponent<CharacterController>();
     }
 
-    private void Update()
+    void Update()
     {
-        // Check if the player is grounded
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, 0.1f, groundLayer);
+        // Check if the player is on the ground
+        isGrounded = controller.isGrounded;
 
-        // Get move input using the Input System
-        moveInput = new Vector2(Keyboard.current.dKey.isPressed ? 1 : Keyboard.current.aKey.isPressed ? -1 : 0, 0);
+        // Calculate movement direction based on player input
+        float moveX = Input.GetAxis("Horizontal");
 
-        // Player movement
-        Vector3 moveDirection = new Vector3(moveInput.x, 0.0f, 0.0f);
-        rb.velocity = new Vector3(moveDirection.x * moveSpeed, rb.velocity.y, 0.0f);
+        // Calculate movement vector
+        moveDirection = new Vector3(moveX, 0, 0);
 
-        // Jumping
+        // Apply movement speed
+        moveDirection *= moveSpeed;
+
+        // Apply gravity
         if (isGrounded)
         {
-            if (Keyboard.current.spaceKey.wasPressedThisFrame)
-            {
-                rb.velocity = new Vector3(rb.velocity.x, Mathf.Sqrt(2 * jumpForce * Mathf.Abs(Physics.gravity.y)), 0);
-                rb.angularVelocity = Vector3.zero; // Prevent rotation during jump
-            }
+            moveDirection.y = 0;
         }
         else
         {
-            // Keep the initial rotation when in mid-air
-            transform.rotation = initialRotation;
+            moveDirection.y -= gravity * Time.deltaTime;
         }
+
+        // Jump
+        if (isGrounded && Input.GetButtonDown("Jump"))
+        {
+            moveDirection.y = jumpForce;
+        }
+
+        // Move the character controller
+        controller.Move(moveDirection * Time.deltaTime);
     }
 }
