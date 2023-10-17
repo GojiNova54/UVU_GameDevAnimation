@@ -93,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        
         velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         anim.SetBool("isJumping", true);
         isJumping = true;
@@ -107,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Transition to Landing animation
             anim.SetBool("isLanding", true);
+            isJumping = false;
             isFalling = false;
             Debug.Log("isLanding is true");
         }
@@ -146,7 +148,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
 }
 
 
