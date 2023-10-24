@@ -516,7 +516,7 @@ MonoBehaviour:
   _assetName: CrystalGeo1
   _assetOpName: nova7::dev::Object/CrystalGeo::1.0
   _assetHelp: 
-  _assetID: 13
+  _assetID: -1
   _assetPath: Assets/Digital Assets/object_nova7.dev.CrystalGeo.1.0.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695185106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0d4b6c5ac3739448b024f7729683c67, type: 3}
   m_Name: 
@@ -1201,13 +1201,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695185106}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f7cc8f2170826b4090da495c850706d, type: 3}
+  m_Script: {fileID: 11500000, guid: 51b5a8b5cbcac134ba0bcf719aa935c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 8
+  moveSpeed: 10
+  jumpForce: 5
   gravity: -9.81
 --- !u!114 &715692309
 MonoBehaviour:
@@ -1570,7 +1570,7 @@ MonoBehaviour:
   _assetName: RockFormationLowPoly1
   _assetOpName: nova7::dev::Object/RockFormationLowPoly::1.0
   _assetHelp: 
-  _assetID: 0
+  _assetID: -1
   _assetPath: Assets/Digital Assets/object_nova7.dev.RockFormationLowPoly.1.0.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0
