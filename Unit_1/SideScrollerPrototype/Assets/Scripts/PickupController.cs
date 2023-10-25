@@ -8,7 +8,7 @@ public class PickupController : MonoBehaviour
     private void Start()
     {
         // Get the AudioSource component attached to the pickup
-        pickupAudioSource = GetComponent<AudioSource>();
+        //pickupAudioSource = GetComponent<AudioSource>();
 
         // Get the Renderer component attached to the pickup
         pickupRenderer = GetComponent<Renderer>();
@@ -25,7 +25,7 @@ public class PickupController : MonoBehaviour
     private void CollectPickup()
     {
         // Play the pickup sound from the pickup's AudioSource
-        if (pickupAudioSource != null)
+        //if (pickupAudioSource != null)
         {
            // pickupAudioSource.Play();
         }

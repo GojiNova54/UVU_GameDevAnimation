@@ -1206,7 +1206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b5a8b5cbcac134ba0bcf719aa935c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  walkSpeed: 8
+  runSpeed: 15
   jumpForce: 5
   gravity: -9.81
 --- !u!114 &715692309
@@ -17613,7 +17614,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7930488242468795895, guid: b7533d1c875161a4d85e2285edf8d471, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

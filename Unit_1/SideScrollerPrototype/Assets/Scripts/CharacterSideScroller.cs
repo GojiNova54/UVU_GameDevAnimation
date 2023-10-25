@@ -1,14 +1,16 @@
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+//[RequireComponent(typeof(CharacterController)]
 public class CharacterSideScroller : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float walkSpeed = 5f;
+    public float runSpeed = 10f;
     public float jumpForce = 4f;
     public float gravity = -9.81f;
 
     private CharacterController controller;
     private Vector3 velocity;
+    private bool isRunning = false;
 
     private void Awake()
     {
@@ -19,6 +21,7 @@ public class CharacterSideScroller : MonoBehaviour
     {
         // Horizontal movement
         var moveInput = Input.GetAxis("Horizontal");
+        var moveSpeed = isRunning ? runSpeed : walkSpeed;
         var moveDirection = new Vector3(moveInput, 0f, 0f) * moveSpeed;
 
         // Apply gravity
@@ -35,6 +38,16 @@ public class CharacterSideScroller : MonoBehaviour
         if (controller.isGrounded && Input.GetButton("Jump"))
         {
             velocity.y = Mathf.Sqrt(jumpForce * -2 * gravity);
+        }
+
+        // Check if Shift key is held down to toggle running
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            isRunning = true;
+        }
+        else
+        {
+            isRunning = false;
         }
 
         // Apply movement and handle collisions
