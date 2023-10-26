@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: RobotAnims.0008.ma
-//Last modified: Wed, Oct 25, 2023 08:45:32 PM
+//Name: RobotAnims.0009.ma
+//Last modified: Wed, Oct 25, 2023 08:45:39 PM
 //Codeset: 1252
 file -rdi 1 -ns "PALBot" -rfn "PALBotRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/UVU_GameDev1_Fall2023/Unit_1/SideScrollerPrototype/Assets/MayaProject//RobotAnims/scenes/PALBot.ma";
 file -r -ns "PALBot" -dr 1 -rfn "PALBotRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/UVU_GameDev1_Fall2023/Unit_1/SideScrollerPrototype/Assets/MayaProject//RobotAnims/scenes/PALBot.ma";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "BCBF97F4-492B-72A9-12B8-AEAFDA86048C";
+fileInfo "UUID" "7C90DFF9-4792-6FDA-7BDD-D988D370DABF";
 createNode transform -s -n "persp";
 	rename -uid "B0C3E75B-4736-448B-9D93-3BB5ED83453F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -45.796144962457163 11.482845929996348 28.067488716555324 ;
-	setAttr ".r" -type "double3" -4.538353047776825 -1864.9999999983359 0 ;
+	setAttr ".t" -type "double3" -40.537681126102484 15.77354917170495 36.420438187719895 ;
+	setAttr ".r" -type "double3" -5.7383530477769069 -1854.999999998332 0 ;
 	setAttr ".rp" -type "double3" 0 8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" -4.1015439812327191e-15 5.8835047150636171e-15 -2.4306972066272292e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -4784,4 +4784,4 @@ connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "sharedReferenceNode.sr" "PALBotRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of RobotAnims.0008.ma
+// End of RobotAnims.0009.ma
