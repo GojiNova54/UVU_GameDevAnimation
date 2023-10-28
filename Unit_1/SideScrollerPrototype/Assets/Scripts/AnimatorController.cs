@@ -6,8 +6,10 @@ public class AnimatorController : MonoBehaviour
 {
     public Animator animator;
     private bool isJumping;
+    private bool isRunning;
     private readonly int idle = Animator.StringToHash("Idle");
     private readonly int walk = Animator.StringToHash("Walk");
+    private readonly int run = Animator.StringToHash("Run");
     private readonly int jump = Animator.StringToHash("Jump");
 
     private void Update()
@@ -23,7 +25,18 @@ public class AnimatorController : MonoBehaviour
             animator.SetTrigger(jump);
             isJumping = true;
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftShift) && !isRunning)
+        {
+            animator.SetTrigger(run);
+            isRunning = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift) && isRunning)
+        {
+            animator.SetTrigger(walk); // Change to "walk" animation when releasing left shift.
+            isRunning = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)
+                 && !isRunning)
         {
             animator.SetTrigger(walk);
         }
@@ -45,3 +58,4 @@ public class AnimatorController : MonoBehaviour
         animator.SetTrigger(idle);
     }
 }
+
