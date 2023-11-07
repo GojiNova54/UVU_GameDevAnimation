@@ -13,13 +13,13 @@ def wireframeColor(color):
 
     for sel in selection:
         shapes = cmds.listRelatives(sel, shapes=True)
-        print(f"Shapes for {sel}: {shapes}")  # Debugging line
+        print(f"Shapes for {sel}: {shapes}")  # Debugging
 
         for shape in shapes:
             cmds.setAttr(shape + ".overrideEnabled", 1)
             cmds.setAttr(shape + ".overrideColor", color)
-            print(f"Changed color for {shape} to {color}")  # Debugging line
+            print(f"Changed color for {shape} to {color}")  # Debugging
 
-# Usage example:
-# Call the function and pass the desired color as an argument (0 to 31)
+
+# Call the function
 wireframeColor(10)
