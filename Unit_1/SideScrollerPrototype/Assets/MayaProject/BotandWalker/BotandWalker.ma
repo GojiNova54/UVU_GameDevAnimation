@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: BotandWalker.ma
-//Last modified: Tue, Nov 07, 2023 03:21:50 PM
+//Last modified: Tue, Nov 07, 2023 05:06:24 PM
 //Codeset: 1252
 file -rdi 1 -ns "PlayerAnims" -rfn "PlayerAnimsRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
 		 "D:/GitRepos/UVU_GameDev1_Fall2023/Unit_1/SideScrollerPrototype/Assets/MayaProject//RigAnims/scenes/PlayerAnims.ma";
@@ -20,28 +20,29 @@ requires "stereoCamera" "10.0";
 requires -nodeType "substanceNode" -nodeType "substanceOutputNode" "substancemaya" "2.3.1";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiAreaLight"
 		 -nodeType "aiStandardSurface" "mtoa" "5.2.1.1";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "810B069E-4142-F6EE-E577-A6ABD0EC7403";
+fileInfo "UUID" "44DAA341-4598-4FF7-211E-C69F45065D81";
 createNode transform -s -n "persp";
 	rename -uid "9A0940BF-48EF-115E-1061-3C9284715313";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -10.189448150486982 20.142313788994201 71.456609144947677 ;
-	setAttr ".r" -type "double3" -8.7383527275180271 -730.99999999995873 0 ;
+	setAttr ".t" -type "double3" -18.357851152111632 8.0744603286221306 75.47002773762695 ;
+	setAttr ".r" -type "double3" 0.26164727211175581 -727.39999999994427 -9.3962914792810553e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "29B897EE-43E8-F3B0-276D-7CA2FBB779DB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".fcp" 10000000;
-	setAttr ".coi" 82.519032785829296;
+	setAttr ".coi" 92.460505923782577;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 29.816181441504092 9.8717836737632751 0.029982089996337891 ;
+	setAttr ".tp" -type "double3" -26.237045563020494 4.8731954459638516 0.31019234657287598 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "668F54C2-41A9-C5AD-D51E-0A8D968FA95C";
@@ -291,6 +292,7 @@ createNode houdiniAsset -n "nova7__dev__Asteroid__1_01";
 	setAttr ".t" -type "double3" -15.607462129083162 0 0 ;
 	setAttr ".otlFilePath" -type "string" "C:/Users/nova7/OneDrive/Documents/houdini19.5/otls/object_nova7.dev.Asteroid.1.0.hdanc";
 	setAttr ".assetName" -type "string" "nova7::dev::Object/Asteroid::1.0";
+	setAttr -s 23 ".outputMaterials";
 	setAttr ".outputMaterials[0].outputMaterialPath" -type "string" "uvquickshade1/shop_definition/texture_material/v_layered1";
 	setAttr -cb on ".houdiniAssetParm_s__tuple0" 1;
 	setAttr -cb on ".houdiniAssetParm_s__tuple1" 1;
@@ -535,6 +537,7 @@ createNode houdiniAsset -n "nova7__dev__CrystalGeo__1_01";
 		-nn "Scale 2" -at "float" -p "houdiniAssetParm_s2";
 	setAttr ".otlFilePath" -type "string" "C:/Users/nova7/OneDrive/Documents/houdini19.5/otls/object_nova7.dev.CrystalGeo.1.0.hdanc";
 	setAttr ".assetName" -type "string" "nova7::dev::Object/CrystalGeo::1.0";
+	setAttr -s 23 ".outputMaterials";
 	setAttr ".outputMaterials[0].outputMaterialPath" -type "string" "uvquickshade1/shop_definition/texture_material/v_layered1";
 	setAttr -cb on ".houdiniAssetParm_s__tuple0" 1;
 	setAttr -cb on ".houdiniAssetParm_s__tuple1" 1;
@@ -769,6 +772,7 @@ createNode houdiniAsset -n "nova7__dev__FloatingRock__1_01";
 		-nn "Seed" -smn 0 -smx 10 -at "float" -p "houdiniAssetParm";
 	setAttr ".otlFilePath" -type "string" "C:/Users/nova7/OneDrive/Documents/houdini19.5/otls/object_nova7.dev.FloatingRock.1.0.hdanc";
 	setAttr ".assetName" -type "string" "nova7::dev::Object/FloatingRock::1.0";
+	setAttr -s 23 ".outputMaterials";
 	setAttr ".outputMaterials[0].outputMaterialPath" -type "string" "uvquickshade1/shop_definition/texture_material/v_layered1";
 	setAttr -cb on ".houdiniAssetParm_s__tuple0" 1;
 	setAttr -cb on ".houdiniAssetParm_s__tuple1" 1;
@@ -798,7 +802,7 @@ createNode houdiniAsset -n "nova7__dev__FloatingRock__1_01";
 	setAttr ".houdiniAssetParm_pickscript" -type "string" "";
 	setAttr -cb on ".houdiniAssetParm_caching" yes;
 	setAttr -cb on ".houdiniAssetParm_renderable" yes;
-	setAttr -cb on ".houdiniAssetParm_seed" 117;
+	setAttr -cb on ".houdiniAssetParm_seed" 1;
 createNode transform -n "FloatingRock1" -p "nova7__dev__FloatingRock__1_01";
 	rename -uid "857C0A94-4EB9-8122-B508-93B9807F043E";
 createNode transform -n "autouv1_0" -p "FloatingRock1";
@@ -1014,6 +1018,7 @@ createNode houdiniAsset -n "nova7__dev__RockFormationLowPoly__1_01";
 		-nn "Seed" -smn 0 -smx 10 -at "float" -p "houdiniAssetParm";
 	setAttr ".otlFilePath" -type "string" "C:/Users/nova7/OneDrive/Documents/houdini19.5/otls/object_nova7.dev.RockFormationLowPoly.1.0.hdanc";
 	setAttr ".assetName" -type "string" "nova7::dev::Object/RockFormationLowPoly::1.0";
+	setAttr -s 23 ".outputMaterials";
 	setAttr ".outputMaterials[0].outputMaterialPath" -type "string" "uvquickshade1/shop_definition/texture_material/v_layered1";
 	setAttr -cb on ".houdiniAssetParm_s__tuple0" 1;
 	setAttr -cb on ".houdiniAssetParm_s__tuple1" 1;
@@ -1270,6 +1275,7 @@ createNode houdiniAsset -n "nova7__dev__ValleyTerrain__1_01";
 		-nn "Scale 2" -at "float" -p "houdiniAssetParm_s2";
 	setAttr ".otlFilePath" -type "string" "C:/Users/nova7/OneDrive/Documents/houdini19.5/otls/object_nova7.dev.ValleyTerrain.1.0.hdanc";
 	setAttr ".assetName" -type "string" "nova7::dev::Object/ValleyTerrain::1.0";
+	setAttr -s 23 ".outputMaterials";
 	setAttr ".outputMaterials[0].outputMaterialPath" -type "string" "uvquickshade1/shop_definition/texture_material/v_layered1";
 	setAttr -cb on ".houdiniAssetParm_s__tuple0" 1;
 	setAttr -cb on ".houdiniAssetParm_s__tuple1" 1;
@@ -1515,6 +1521,7 @@ createNode houdiniAsset -n "nova7__dev__SciFiStructure__1_01";
 		-nn "Global Scale" -smn 0 -smx 10 -at "float" -p "houdiniAssetParm";
 	setAttr ".otlFilePath" -type "string" "C:/Users/nova7/OneDrive/Documents/houdini19.5/otls/object_nova7.dev.SciFiStructure.1.0.hdanc";
 	setAttr ".assetName" -type "string" "nova7::dev::Object/SciFiStructure::1.0";
+	setAttr -s 23 ".outputMaterials";
 	setAttr ".outputMaterials[0].outputMaterialPath" -type "string" "uvquickshade1/shop_definition/texture_material/v_layered1";
 	setAttr -cb on ".houdiniAssetParm_s__tuple0" 1;
 	setAttr -cb on ".houdiniAssetParm_s__tuple1" 1;
@@ -1566,9 +1573,243 @@ createNode mesh -n "uvflatten1_0Shape" -p "|nova7__dev__SciFiStructure__1_01|Sci
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".dr" 1;
+createNode houdiniAsset -n "nova7__dev__FloatingRock2__2_01";
+	rename -uid "0BE00F67-4495-64C6-8A98-E9AEF16CA961";
+	addAttr -is true -ci true -sn "houdiniAssetParm" -ln "houdiniAssetParm" -at "compound" 
+		-nc 7;
+	addAttr -is true -ci true -sn "houdiniAssetParm_stdswitcher4_0__folder" -ln "houdiniAssetParm_stdswitcher4_0__folder" 
+		-nn "Transform" -at "compound" -p "houdiniAssetParm" -nc 12;
+	addAttr -is true -ci true -sn "houdiniAssetParm_xOrd" -ln "houdiniAssetParm_xOrd" 
+		-nn "Transform Order" -min 0 -max 5 -en "Scale Rot Trans:Scale Trans Rot:Rot Scale Trans:Rot Trans Scale:Trans Scale Rot:Trans Rot Scale" 
+		-at "enum" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_rOrd" -ln "houdiniAssetParm_rOrd" 
+		-nn "Rotate Order" -min 0 -max 5 -en "Rx Ry Rz:Rx Rz Ry:Ry Rx Rz:Ry Rz Rx:Rz Rx Ry:Rz Ry Rx" 
+		-at "enum" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_t" -ln "houdiniAssetParm_t" -nn "Translate" 
+		-at "compound" -p "houdiniAssetParm_stdswitcher4_0__folder" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_t__tuple0" -ln "houdiniAssetParm_t__tuple0" 
+		-nn "Translate 0" -at "float" -p "houdiniAssetParm_t";
+	addAttr -is true -ci true -sn "houdiniAssetParm_t__tuple1" -ln "houdiniAssetParm_t__tuple1" 
+		-nn "Translate 1" -at "float" -p "houdiniAssetParm_t";
+	addAttr -is true -ci true -sn "houdiniAssetParm_t__tuple2" -ln "houdiniAssetParm_t__tuple2" 
+		-nn "Translate 2" -at "float" -p "houdiniAssetParm_t";
+	addAttr -is true -ci true -sn "houdiniAssetParm_r" -ln "houdiniAssetParm_r" -nn "Rotate" 
+		-at "compound" -p "houdiniAssetParm_stdswitcher4_0__folder" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_r__tuple0" -ln "houdiniAssetParm_r__tuple0" 
+		-nn "Rotate 0" -at "float" -p "houdiniAssetParm_r";
+	addAttr -is true -ci true -sn "houdiniAssetParm_r__tuple1" -ln "houdiniAssetParm_r__tuple1" 
+		-nn "Rotate 1" -at "float" -p "houdiniAssetParm_r";
+	addAttr -is true -ci true -sn "houdiniAssetParm_r__tuple2" -ln "houdiniAssetParm_r__tuple2" 
+		-nn "Rotate 2" -at "float" -p "houdiniAssetParm_r";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s" -ln "houdiniAssetParm_s" -nn "Scale" 
+		-at "compound" -p "houdiniAssetParm_stdswitcher4_0__folder" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_s__tuple0" -ln "houdiniAssetParm_s__tuple0" 
+		-nn "Scale 0" -at "float" -p "houdiniAssetParm_s";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s__tuple1" -ln "houdiniAssetParm_s__tuple1" 
+		-nn "Scale 1" -at "float" -p "houdiniAssetParm_s";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s__tuple2" -ln "houdiniAssetParm_s__tuple2" 
+		-nn "Scale 2" -at "float" -p "houdiniAssetParm_s";
+	addAttr -is true -ci true -sn "houdiniAssetParm_p" -ln "houdiniAssetParm_p" -nn "Pivot Translate" 
+		-at "compound" -p "houdiniAssetParm_stdswitcher4_0__folder" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_p__tuple0" -ln "houdiniAssetParm_p__tuple0" 
+		-nn "Pivot Translate 0" -at "float" -p "houdiniAssetParm_p";
+	addAttr -is true -ci true -sn "houdiniAssetParm_p__tuple1" -ln "houdiniAssetParm_p__tuple1" 
+		-nn "Pivot Translate 1" -at "float" -p "houdiniAssetParm_p";
+	addAttr -is true -ci true -sn "houdiniAssetParm_p__tuple2" -ln "houdiniAssetParm_p__tuple2" 
+		-nn "Pivot Translate 2" -at "float" -p "houdiniAssetParm_p";
+	addAttr -is true -ci true -sn "houdiniAssetParm_pr" -ln "houdiniAssetParm_pr" -nn "Pivot Rotate" 
+		-at "compound" -p "houdiniAssetParm_stdswitcher4_0__folder" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_pr__tuple0" -ln "houdiniAssetParm_pr__tuple0" 
+		-nn "Pivot Rotate 0" -at "float" -p "houdiniAssetParm_pr";
+	addAttr -is true -ci true -sn "houdiniAssetParm_pr__tuple1" -ln "houdiniAssetParm_pr__tuple1" 
+		-nn "Pivot Rotate 1" -at "float" -p "houdiniAssetParm_pr";
+	addAttr -is true -ci true -sn "houdiniAssetParm_pr__tuple2" -ln "houdiniAssetParm_pr__tuple2" 
+		-nn "Pivot Rotate 2" -at "float" -p "houdiniAssetParm_pr";
+	addAttr -is true -ci true -sn "houdiniAssetParm_scale" -ln "houdiniAssetParm_scale" 
+		-nn "Uniform Scale" -at "float" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_pre_xform" -ln "houdiniAssetParm_pre_xform" 
+		-nn "Modify Pre-Transform" -min 0 -max 6 -en "Modify Pre-Transform:Clean Transform:Clean Translates:Clean Rotates:Clean Scales:Extract Pre-transform:Reset Pre-transform" 
+		-at "enum" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_keeppos" -ln "houdiniAssetParm_keeppos" 
+		-nn "Keep Position When Parenting" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_childcomp" -ln "houdiniAssetParm_childcomp" 
+		-nn "Child Compensation" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_constraints_on" -ln "houdiniAssetParm_constraints_on" 
+		-nn "Enable Constraints" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_stdswitcher4_1__folder" -ln "houdiniAssetParm_stdswitcher4_1__folder" 
+		-nn "Render" -at "compound" -p "houdiniAssetParm" -nc 10;
+	addAttr -dcb 1 -is true -sn "houdiniAssetParm_shop_materialpath__node" -ln "houdiniAssetParm_shop_materialpath__node" 
+		-nn "Material" -dv -1 -at "long" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_tdisplay" -ln "houdiniAssetParm_tdisplay" 
+		-nn "Display" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_display" -ln "houdiniAssetParm_display" 
+		-nn "Display" -min 0 -max 1 -smn 0 -smx 1 -at "long" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_viewportlod" -ln "houdiniAssetParm_viewportlod" 
+		-nn "Display As" -min 0 -max 5 -en "Full Geometry:Point Cloud:Bounding Box:Centroid:Hidden:Subdivision Surface / Curves" 
+		-at "enum" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_rendervisibility" -ln "houdiniAssetParm_vm_rendervisibility" 
+		-nn "Render Visibility" -min 0 -max 6 -en "Visible to all:Visible only to primary rays:Visible only to primary and shadow rays:Invisible to primary rays (Phantom):Invisible to diffuse rays:Invisible to secondary rays:Invisible (Unrenderable)" 
+		-at "enum" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_rendersubd" -ln "houdiniAssetParm_vm_rendersubd" 
+		-nn "Render Polygons As Subdivision (Mantra)" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_folder0_0__folder" -ln "houdiniAssetParm_folder0_0__folder" 
+		-nn "Shading" -at "compound" -p "houdiniAssetParm_stdswitcher4_1__folder" -nc 10;
+	addAttr -is true -ci true -sn "houdiniAssetParm_categories" -ln "houdiniAssetParm_categories" 
+		-nn "Categories" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_reflectmask" -ln "houdiniAssetParm_reflectmask" 
+		-nn "Reflection Mask" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_refractmask" -ln "houdiniAssetParm_refractmask" 
+		-nn "Refraction Mask" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_lightmask" -ln "houdiniAssetParm_lightmask" 
+		-nn "Light Mask" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_lightcategories" -ln "houdiniAssetParm_lightcategories" 
+		-nn "Light Selection" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_lpetag" -ln "houdiniAssetParm_vm_lpetag" 
+		-nn "LPE Tag" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_volumefilter" -ln "houdiniAssetParm_vm_volumefilter" 
+		-nn "Volume Filter" -min 0 -max 6 -en "Box Filter:Gaussian:Bartlett (triangle):Catmull-Rom:Hanning:Blackman:Sinc (sharpening)" 
+		-at "enum" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_volumefilterwidth" -ln "houdiniAssetParm_vm_volumefilterwidth" 
+		-nn "Volume Filter Width" -smn 0.0010000000474974513 -smx 5 -at "float" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_matte" -ln "houdiniAssetParm_vm_matte" 
+		-nn "Matte shading" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_rayshade" -ln "houdiniAssetParm_vm_rayshade" 
+		-nn "Raytrace Shading" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_folder0_1__folder" -ln "houdiniAssetParm_folder0_1__folder" 
+		-nn "Sampling" -at "compound" -p "houdiniAssetParm_stdswitcher4_1__folder" -nc 1;
+	addAttr -is true -ci true -sn "houdiniAssetParm_geo_velocityblur" -ln "houdiniAssetParm_geo_velocityblur" 
+		-nn "Geometry Velocity Blur" -min 0 -max 2 -en "No Velocity Blur:Velocity Blur:Acceleration Blur" 
+		-at "enum" -p "houdiniAssetParm_folder0_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_folder0_2__folder" -ln "houdiniAssetParm_folder0_2__folder" 
+		-nn "Dicing" -at "compound" -p "houdiniAssetParm_stdswitcher4_1__folder" -nc 4;
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_shadingquality" -ln "houdiniAssetParm_vm_shadingquality" 
+		-nn "Shading Quality" -smn 0 -smx 10 -at "float" -p "houdiniAssetParm_folder0_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_flatness" -ln "houdiniAssetParm_vm_flatness" 
+		-nn "Dicing Flatness" -smn 0 -smx 1 -at "float" -p "houdiniAssetParm_folder0_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_raypredice" -ln "houdiniAssetParm_vm_raypredice" 
+		-nn "Ray Predicing" -min 0 -max 2 -en "Disable Predicing:Full Predicing:Precompute Bounds" 
+		-at "enum" -p "houdiniAssetParm_folder0_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_curvesurface" -ln "houdiniAssetParm_vm_curvesurface" 
+		-nn "Shade Curves As Surfaces" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_folder0_3__folder" -ln "houdiniAssetParm_folder0_3__folder" 
+		-nn "Geometry" -at "compound" -p "houdiniAssetParm_stdswitcher4_1__folder" -nc 14;
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_rmbackface" -ln "houdiniAssetParm_vm_rmbackface" 
+		-nn "Backface Removal" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -dcb 1 -is true -sn "houdiniAssetParm_shop_geometrypath__node" -ln "houdiniAssetParm_shop_geometrypath__node" 
+		-nn "Procedural Shader" -dv -1 -at "long" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_forcegeometry" -ln "houdiniAssetParm_vm_forcegeometry" 
+		-nn "Force Procedural Geometry Output" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_rendersubdcurves" -ln "houdiniAssetParm_vm_rendersubdcurves" 
+		-nn "Render Polygon Curves As Subdivision (Mantra)" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_renderpoints" -ln "houdiniAssetParm_vm_renderpoints" 
+		-nn "Render As Points (Mantra)" -min 0 -max 2 -en "No Point Rendering:Render Only Points:Render Unconnected Points" 
+		-at "enum" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_renderpointsas" -ln "houdiniAssetParm_vm_renderpointsas" 
+		-nn "Render Points As (Mantra)" -min 0 -max 1 -en "Spheres:Circles" -at "enum" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_usenforpoints" -ln "houdiniAssetParm_vm_usenforpoints" 
+		-nn "Use N For Point Rendering" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_pointscale" -ln "houdiniAssetParm_vm_pointscale" 
+		-nn "Point Scale" -min 0 -smn 0 -smx 10 -at "float" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_pscalediameter" -ln "houdiniAssetParm_vm_pscalediameter" 
+		-nn "Treat Point Scale as Diameter Instead of Radius" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_metavolume" -ln "houdiniAssetParm_vm_metavolume" 
+		-nn "Metaballs as Volume" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_coving" -ln "houdiniAssetParm_vm_coving" 
+		-nn "Coving" -min 0 -max 2 -en "Disable Coving:Coving for displacement/sub-d:Coving for all primitives" 
+		-at "enum" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_materialoverride" -ln "houdiniAssetParm_vm_materialoverride" 
+		-nn "Material Override" -min 0 -max 2 -en "Disabled:Evaluate for Each Primitve/Point:Evaluate Once" 
+		-at "enum" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_overridedetail" -ln "houdiniAssetParm_vm_overridedetail" 
+		-nn "Ignore Geometry Attribute Shaders" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_procuseroottransform" -ln "houdiniAssetParm_vm_procuseroottransform" 
+		-nn "Proc Use Root Transform" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_stdswitcher4_2__folder" -ln "houdiniAssetParm_stdswitcher4_2__folder" 
+		-nn "Misc" -at "compound" -p "houdiniAssetParm" -nc 7;
+	addAttr -is true -ci true -sn "houdiniAssetParm_use_dcolor" -ln "houdiniAssetParm_use_dcolor" 
+		-nn "Set Wireframe Color" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -uac -sn "houdiniAssetParm_dcolor" -ln "houdiniAssetParm_dcolor" 
+		-nn "Wireframe Color" -at "float3" -p "houdiniAssetParm_stdswitcher4_2__folder" -nc 
+		3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_dcolorr" -ln "houdiniAssetParm_dcolorR" 
+		-at "float" -p "houdiniAssetParm_dcolor";
+	addAttr -is true -ci true -sn "houdiniAssetParm_dcolorg" -ln "houdiniAssetParm_dcolorG" 
+		-at "float" -p "houdiniAssetParm_dcolor";
+	addAttr -is true -ci true -sn "houdiniAssetParm_dcolorb" -ln "houdiniAssetParm_dcolorB" 
+		-at "float" -p "houdiniAssetParm_dcolor";
+	addAttr -is true -ci true -sn "houdiniAssetParm_picking" -ln "houdiniAssetParm_picking" 
+		-nn "Viewport Selecting Enabled" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -uaf -sn "houdiniAssetParm_pickscript" -ln "houdiniAssetParm_pickscript" 
+		-nn "Select Script" -ct "hapiParmFile_read" -dt "string" -p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_caching" -ln "houdiniAssetParm_caching" 
+		-nn "Cache Object Transform" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vport_shadeopen" -ln "houdiniAssetParm_vport_shadeopen" 
+		-nn "Shade Open Curves In Viewport" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vport_onionskin" -ln "houdiniAssetParm_vport_onionskin" 
+		-nn "Onion Skinning" -min 0 -max 2 -en "Off:Transform only:Full Deformation" -at "enum" 
+		-p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_renderable" -ln "houdiniAssetParm_renderable" 
+		-nn "Renderable" -min 0 -max 1 -at "bool" -p "houdiniAssetParm";
+	addAttr -is true -ci true -sn "houdiniAssetParm_seed" -ln "houdiniAssetParm_seed" 
+		-nn "Seed" -smn 0 -smx 10 -at "float" -p "houdiniAssetParm";
+	addAttr -is true -ci true -sn "houdiniAssetParm_size" -ln "houdiniAssetParm_size" 
+		-nn "Size" -at "compound" -p "houdiniAssetParm" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_size__tuple0" -ln "houdiniAssetParm_size__tuple0" 
+		-nn "Size 0" -at "float" -p "houdiniAssetParm_size";
+	addAttr -is true -ci true -sn "houdiniAssetParm_size__tuple1" -ln "houdiniAssetParm_size__tuple1" 
+		-nn "Size 1" -at "float" -p "houdiniAssetParm_size";
+	addAttr -is true -ci true -sn "houdiniAssetParm_size__tuple2" -ln "houdiniAssetParm_size__tuple2" 
+		-nn "Size 2" -at "float" -p "houdiniAssetParm_size";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s2" -ln "houdiniAssetParm_s2" -nn "Scale" 
+		-at "compound" -p "houdiniAssetParm" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_s2__tuple0" -ln "houdiniAssetParm_s2__tuple0" 
+		-nn "Scale 0" -at "float" -p "houdiniAssetParm_s2";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s2__tuple1" -ln "houdiniAssetParm_s2__tuple1" 
+		-nn "Scale 1" -at "float" -p "houdiniAssetParm_s2";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s2__tuple2" -ln "houdiniAssetParm_s2__tuple2" 
+		-nn "Scale 2" -at "float" -p "houdiniAssetParm_s2";
+	setAttr ".otlFilePath" -type "string" "C:/Users/nova7/OneDrive/Documents/houdini19.5/otls/object_nova7.dev.FloatingRock2.2.0.hdanc";
+	setAttr ".assetName" -type "string" "nova7::dev::Object/FloatingRock2::2.0";
+	setAttr -s 23 ".outputMaterials";
+	setAttr ".outputMaterials[0].outputMaterialPath" -type "string" "uvquickshade1/shop_definition/texture_material/v_layered1";
+	setAttr -cb on ".houdiniAssetParm_s__tuple0" 1;
+	setAttr -cb on ".houdiniAssetParm_s__tuple1" 1;
+	setAttr -cb on ".houdiniAssetParm_s__tuple2" 1;
+	setAttr -cb on ".houdiniAssetParm_scale" 1;
+	setAttr -cb on ".houdiniAssetParm_shop_materialpath__node" -1;
+	setAttr -l on -cb on ".houdiniAssetParm_display" 1;
+	setAttr ".houdiniAssetParm_categories" -type "string" "";
+	setAttr ".houdiniAssetParm_reflectmask" -type "string" "*";
+	setAttr ".houdiniAssetParm_refractmask" -type "string" "*";
+	setAttr ".houdiniAssetParm_lightmask" -type "string" "*";
+	setAttr ".houdiniAssetParm_lightcategories" -type "string" "*";
+	setAttr ".houdiniAssetParm_vm_lpetag" -type "string" "";
+	setAttr -cb on ".houdiniAssetParm_vm_volumefilterwidth" 1;
+	setAttr -cb on ".houdiniAssetParm_vm_shadingquality" 1;
+	setAttr -cb on ".houdiniAssetParm_vm_flatness" 0.05000000074505806;
+	setAttr -cb on ".houdiniAssetParm_shop_geometrypath__node" -1;
+	setAttr -cb on ".houdiniAssetParm_vm_forcegeometry" yes;
+	setAttr -cb on ".houdiniAssetParm_vm_renderpoints" 2;
+	setAttr -cb on ".houdiniAssetParm_vm_pointscale" 1;
+	setAttr -cb on ".houdiniAssetParm_vm_coving" 1;
+	setAttr -cb on ".houdiniAssetParm_vm_materialoverride" 2;
+	setAttr -cb on ".houdiniAssetParm_vm_procuseroottransform" yes;
+	setAttr -l on -cb on ".houdiniAssetParm_dcolor" -type "float3" 1 1 1 ;
+	setAttr -l on -cb on ".houdiniAssetParm_dcolor";
+	setAttr -cb on ".houdiniAssetParm_picking" yes;
+	setAttr ".houdiniAssetParm_pickscript" -type "string" "";
+	setAttr -cb on ".houdiniAssetParm_caching" yes;
+	setAttr -cb on ".houdiniAssetParm_renderable" yes;
+	setAttr -cb on ".houdiniAssetParm_size__tuple0" 2;
+	setAttr -cb on ".houdiniAssetParm_size__tuple1" 5;
+	setAttr -cb on ".houdiniAssetParm_size__tuple2" 2;
+	setAttr -cb on ".houdiniAssetParm_s2__tuple0" 4;
+	setAttr -cb on ".houdiniAssetParm_s2__tuple1" 3;
+	setAttr -cb on ".houdiniAssetParm_s2__tuple2" 3;
+createNode transform -n "FloatingRock2" -p "nova7__dev__FloatingRock2__2_01";
+	rename -uid "24FC06CA-47E6-394D-09CC-529A37ED79B5";
 createNode transform -n "aiAreaLight1";
 	rename -uid "D6E3BB49-4BF3-0029-58CB-DB8FC131B5DB";
-	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 11.892646514436667 42.136379546713343 ;
 	setAttr ".s" -type "double3" 56.773705822958988 36.482474662548967 36.482474662548967 ;
 createNode aiAreaLight -n "aiAreaLightShape1" -p "aiAreaLight1";
@@ -1583,7 +1824,6 @@ createNode aiAreaLight -n "aiAreaLightShape1" -p "aiAreaLight1";
 		} ;
 createNode transform -n "aiAreaLight2";
 	rename -uid "D1EA4192-49DD-1A6D-2E42-4FA59B0A977C";
-	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 11.892646514436667 -52.153723471366405 ;
 	setAttr ".r" -type "double3" -12.255518926371499 180 0 ;
 	setAttr ".s" -type "double3" 56.773705822958988 36.482474662548967 36.482474662548967 ;
@@ -1597,24 +1837,277 @@ createNode aiAreaLight -n "aiAreaLightShape2" -p "aiAreaLight2";
 	setAttr ".ai_translator" -type "string" "quad";
 	setAttr ".aal" -type "attributeAlias" {"exposure","aiExposure","normalize","aiNormalize"
 		} ;
+createNode houdiniAsset -n "nova7__dev__FloatingRock2__2_02";
+	rename -uid "2CCD2A9D-43D0-BF29-1493-98AB3D046246";
+	addAttr -is true -ci true -sn "houdiniAssetParm" -ln "houdiniAssetParm" -at "compound" 
+		-nc 7;
+	addAttr -is true -ci true -sn "houdiniAssetParm_stdswitcher4_0__folder" -ln "houdiniAssetParm_stdswitcher4_0__folder" 
+		-nn "Transform" -at "compound" -p "houdiniAssetParm" -nc 12;
+	addAttr -is true -ci true -sn "houdiniAssetParm_xOrd" -ln "houdiniAssetParm_xOrd" 
+		-nn "Transform Order" -min 0 -max 5 -en "Scale Rot Trans:Scale Trans Rot:Rot Scale Trans:Rot Trans Scale:Trans Scale Rot:Trans Rot Scale" 
+		-at "enum" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_rOrd" -ln "houdiniAssetParm_rOrd" 
+		-nn "Rotate Order" -min 0 -max 5 -en "Rx Ry Rz:Rx Rz Ry:Ry Rx Rz:Ry Rz Rx:Rz Rx Ry:Rz Ry Rx" 
+		-at "enum" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_t" -ln "houdiniAssetParm_t" -nn "Translate" 
+		-at "compound" -p "houdiniAssetParm_stdswitcher4_0__folder" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_t__tuple0" -ln "houdiniAssetParm_t__tuple0" 
+		-nn "Translate 0" -at "float" -p "houdiniAssetParm_t";
+	addAttr -is true -ci true -sn "houdiniAssetParm_t__tuple1" -ln "houdiniAssetParm_t__tuple1" 
+		-nn "Translate 1" -at "float" -p "houdiniAssetParm_t";
+	addAttr -is true -ci true -sn "houdiniAssetParm_t__tuple2" -ln "houdiniAssetParm_t__tuple2" 
+		-nn "Translate 2" -at "float" -p "houdiniAssetParm_t";
+	addAttr -is true -ci true -sn "houdiniAssetParm_r" -ln "houdiniAssetParm_r" -nn "Rotate" 
+		-at "compound" -p "houdiniAssetParm_stdswitcher4_0__folder" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_r__tuple0" -ln "houdiniAssetParm_r__tuple0" 
+		-nn "Rotate 0" -at "float" -p "houdiniAssetParm_r";
+	addAttr -is true -ci true -sn "houdiniAssetParm_r__tuple1" -ln "houdiniAssetParm_r__tuple1" 
+		-nn "Rotate 1" -at "float" -p "houdiniAssetParm_r";
+	addAttr -is true -ci true -sn "houdiniAssetParm_r__tuple2" -ln "houdiniAssetParm_r__tuple2" 
+		-nn "Rotate 2" -at "float" -p "houdiniAssetParm_r";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s" -ln "houdiniAssetParm_s" -nn "Scale" 
+		-at "compound" -p "houdiniAssetParm_stdswitcher4_0__folder" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_s__tuple0" -ln "houdiniAssetParm_s__tuple0" 
+		-nn "Scale 0" -at "float" -p "houdiniAssetParm_s";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s__tuple1" -ln "houdiniAssetParm_s__tuple1" 
+		-nn "Scale 1" -at "float" -p "houdiniAssetParm_s";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s__tuple2" -ln "houdiniAssetParm_s__tuple2" 
+		-nn "Scale 2" -at "float" -p "houdiniAssetParm_s";
+	addAttr -is true -ci true -sn "houdiniAssetParm_p" -ln "houdiniAssetParm_p" -nn "Pivot Translate" 
+		-at "compound" -p "houdiniAssetParm_stdswitcher4_0__folder" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_p__tuple0" -ln "houdiniAssetParm_p__tuple0" 
+		-nn "Pivot Translate 0" -at "float" -p "houdiniAssetParm_p";
+	addAttr -is true -ci true -sn "houdiniAssetParm_p__tuple1" -ln "houdiniAssetParm_p__tuple1" 
+		-nn "Pivot Translate 1" -at "float" -p "houdiniAssetParm_p";
+	addAttr -is true -ci true -sn "houdiniAssetParm_p__tuple2" -ln "houdiniAssetParm_p__tuple2" 
+		-nn "Pivot Translate 2" -at "float" -p "houdiniAssetParm_p";
+	addAttr -is true -ci true -sn "houdiniAssetParm_pr" -ln "houdiniAssetParm_pr" -nn "Pivot Rotate" 
+		-at "compound" -p "houdiniAssetParm_stdswitcher4_0__folder" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_pr__tuple0" -ln "houdiniAssetParm_pr__tuple0" 
+		-nn "Pivot Rotate 0" -at "float" -p "houdiniAssetParm_pr";
+	addAttr -is true -ci true -sn "houdiniAssetParm_pr__tuple1" -ln "houdiniAssetParm_pr__tuple1" 
+		-nn "Pivot Rotate 1" -at "float" -p "houdiniAssetParm_pr";
+	addAttr -is true -ci true -sn "houdiniAssetParm_pr__tuple2" -ln "houdiniAssetParm_pr__tuple2" 
+		-nn "Pivot Rotate 2" -at "float" -p "houdiniAssetParm_pr";
+	addAttr -is true -ci true -sn "houdiniAssetParm_scale" -ln "houdiniAssetParm_scale" 
+		-nn "Uniform Scale" -at "float" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_pre_xform" -ln "houdiniAssetParm_pre_xform" 
+		-nn "Modify Pre-Transform" -min 0 -max 6 -en "Modify Pre-Transform:Clean Transform:Clean Translates:Clean Rotates:Clean Scales:Extract Pre-transform:Reset Pre-transform" 
+		-at "enum" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_keeppos" -ln "houdiniAssetParm_keeppos" 
+		-nn "Keep Position When Parenting" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_childcomp" -ln "houdiniAssetParm_childcomp" 
+		-nn "Child Compensation" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_constraints_on" -ln "houdiniAssetParm_constraints_on" 
+		-nn "Enable Constraints" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_stdswitcher4_1__folder" -ln "houdiniAssetParm_stdswitcher4_1__folder" 
+		-nn "Render" -at "compound" -p "houdiniAssetParm" -nc 10;
+	addAttr -dcb 1 -is true -sn "houdiniAssetParm_shop_materialpath__node" -ln "houdiniAssetParm_shop_materialpath__node" 
+		-nn "Material" -dv -1 -at "long" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_tdisplay" -ln "houdiniAssetParm_tdisplay" 
+		-nn "Display" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_display" -ln "houdiniAssetParm_display" 
+		-nn "Display" -min 0 -max 1 -smn 0 -smx 1 -at "long" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_viewportlod" -ln "houdiniAssetParm_viewportlod" 
+		-nn "Display As" -min 0 -max 5 -en "Full Geometry:Point Cloud:Bounding Box:Centroid:Hidden:Subdivision Surface / Curves" 
+		-at "enum" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_rendervisibility" -ln "houdiniAssetParm_vm_rendervisibility" 
+		-nn "Render Visibility" -min 0 -max 6 -en "Visible to all:Visible only to primary rays:Visible only to primary and shadow rays:Invisible to primary rays (Phantom):Invisible to diffuse rays:Invisible to secondary rays:Invisible (Unrenderable)" 
+		-at "enum" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_rendersubd" -ln "houdiniAssetParm_vm_rendersubd" 
+		-nn "Render Polygons As Subdivision (Mantra)" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_folder0_0__folder" -ln "houdiniAssetParm_folder0_0__folder" 
+		-nn "Shading" -at "compound" -p "houdiniAssetParm_stdswitcher4_1__folder" -nc 10;
+	addAttr -is true -ci true -sn "houdiniAssetParm_categories" -ln "houdiniAssetParm_categories" 
+		-nn "Categories" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_reflectmask" -ln "houdiniAssetParm_reflectmask" 
+		-nn "Reflection Mask" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_refractmask" -ln "houdiniAssetParm_refractmask" 
+		-nn "Refraction Mask" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_lightmask" -ln "houdiniAssetParm_lightmask" 
+		-nn "Light Mask" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_lightcategories" -ln "houdiniAssetParm_lightcategories" 
+		-nn "Light Selection" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_lpetag" -ln "houdiniAssetParm_vm_lpetag" 
+		-nn "LPE Tag" -dt "string" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_volumefilter" -ln "houdiniAssetParm_vm_volumefilter" 
+		-nn "Volume Filter" -min 0 -max 6 -en "Box Filter:Gaussian:Bartlett (triangle):Catmull-Rom:Hanning:Blackman:Sinc (sharpening)" 
+		-at "enum" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_volumefilterwidth" -ln "houdiniAssetParm_vm_volumefilterwidth" 
+		-nn "Volume Filter Width" -smn 0.0010000000474974513 -smx 5 -at "float" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_matte" -ln "houdiniAssetParm_vm_matte" 
+		-nn "Matte shading" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_rayshade" -ln "houdiniAssetParm_vm_rayshade" 
+		-nn "Raytrace Shading" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_0__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_folder0_1__folder" -ln "houdiniAssetParm_folder0_1__folder" 
+		-nn "Sampling" -at "compound" -p "houdiniAssetParm_stdswitcher4_1__folder" -nc 1;
+	addAttr -is true -ci true -sn "houdiniAssetParm_geo_velocityblur" -ln "houdiniAssetParm_geo_velocityblur" 
+		-nn "Geometry Velocity Blur" -min 0 -max 2 -en "No Velocity Blur:Velocity Blur:Acceleration Blur" 
+		-at "enum" -p "houdiniAssetParm_folder0_1__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_folder0_2__folder" -ln "houdiniAssetParm_folder0_2__folder" 
+		-nn "Dicing" -at "compound" -p "houdiniAssetParm_stdswitcher4_1__folder" -nc 4;
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_shadingquality" -ln "houdiniAssetParm_vm_shadingquality" 
+		-nn "Shading Quality" -smn 0 -smx 10 -at "float" -p "houdiniAssetParm_folder0_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_flatness" -ln "houdiniAssetParm_vm_flatness" 
+		-nn "Dicing Flatness" -smn 0 -smx 1 -at "float" -p "houdiniAssetParm_folder0_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_raypredice" -ln "houdiniAssetParm_vm_raypredice" 
+		-nn "Ray Predicing" -min 0 -max 2 -en "Disable Predicing:Full Predicing:Precompute Bounds" 
+		-at "enum" -p "houdiniAssetParm_folder0_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_curvesurface" -ln "houdiniAssetParm_vm_curvesurface" 
+		-nn "Shade Curves As Surfaces" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_folder0_3__folder" -ln "houdiniAssetParm_folder0_3__folder" 
+		-nn "Geometry" -at "compound" -p "houdiniAssetParm_stdswitcher4_1__folder" -nc 14;
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_rmbackface" -ln "houdiniAssetParm_vm_rmbackface" 
+		-nn "Backface Removal" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -dcb 1 -is true -sn "houdiniAssetParm_shop_geometrypath__node" -ln "houdiniAssetParm_shop_geometrypath__node" 
+		-nn "Procedural Shader" -dv -1 -at "long" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_forcegeometry" -ln "houdiniAssetParm_vm_forcegeometry" 
+		-nn "Force Procedural Geometry Output" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_rendersubdcurves" -ln "houdiniAssetParm_vm_rendersubdcurves" 
+		-nn "Render Polygon Curves As Subdivision (Mantra)" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_renderpoints" -ln "houdiniAssetParm_vm_renderpoints" 
+		-nn "Render As Points (Mantra)" -min 0 -max 2 -en "No Point Rendering:Render Only Points:Render Unconnected Points" 
+		-at "enum" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_renderpointsas" -ln "houdiniAssetParm_vm_renderpointsas" 
+		-nn "Render Points As (Mantra)" -min 0 -max 1 -en "Spheres:Circles" -at "enum" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_usenforpoints" -ln "houdiniAssetParm_vm_usenforpoints" 
+		-nn "Use N For Point Rendering" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_pointscale" -ln "houdiniAssetParm_vm_pointscale" 
+		-nn "Point Scale" -min 0 -smn 0 -smx 10 -at "float" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_pscalediameter" -ln "houdiniAssetParm_vm_pscalediameter" 
+		-nn "Treat Point Scale as Diameter Instead of Radius" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_metavolume" -ln "houdiniAssetParm_vm_metavolume" 
+		-nn "Metaballs as Volume" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_coving" -ln "houdiniAssetParm_vm_coving" 
+		-nn "Coving" -min 0 -max 2 -en "Disable Coving:Coving for displacement/sub-d:Coving for all primitives" 
+		-at "enum" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_materialoverride" -ln "houdiniAssetParm_vm_materialoverride" 
+		-nn "Material Override" -min 0 -max 2 -en "Disabled:Evaluate for Each Primitve/Point:Evaluate Once" 
+		-at "enum" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_overridedetail" -ln "houdiniAssetParm_vm_overridedetail" 
+		-nn "Ignore Geometry Attribute Shaders" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vm_procuseroottransform" -ln "houdiniAssetParm_vm_procuseroottransform" 
+		-nn "Proc Use Root Transform" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_folder0_3__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_stdswitcher4_2__folder" -ln "houdiniAssetParm_stdswitcher4_2__folder" 
+		-nn "Misc" -at "compound" -p "houdiniAssetParm" -nc 7;
+	addAttr -is true -ci true -sn "houdiniAssetParm_use_dcolor" -ln "houdiniAssetParm_use_dcolor" 
+		-nn "Set Wireframe Color" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -uac -sn "houdiniAssetParm_dcolor" -ln "houdiniAssetParm_dcolor" 
+		-nn "Wireframe Color" -at "float3" -p "houdiniAssetParm_stdswitcher4_2__folder" -nc 
+		3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_dcolorr" -ln "houdiniAssetParm_dcolorR" 
+		-at "float" -p "houdiniAssetParm_dcolor";
+	addAttr -is true -ci true -sn "houdiniAssetParm_dcolorg" -ln "houdiniAssetParm_dcolorG" 
+		-at "float" -p "houdiniAssetParm_dcolor";
+	addAttr -is true -ci true -sn "houdiniAssetParm_dcolorb" -ln "houdiniAssetParm_dcolorB" 
+		-at "float" -p "houdiniAssetParm_dcolor";
+	addAttr -is true -ci true -sn "houdiniAssetParm_picking" -ln "houdiniAssetParm_picking" 
+		-nn "Viewport Selecting Enabled" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -uaf -sn "houdiniAssetParm_pickscript" -ln "houdiniAssetParm_pickscript" 
+		-nn "Select Script" -ct "hapiParmFile_read" -dt "string" -p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_caching" -ln "houdiniAssetParm_caching" 
+		-nn "Cache Object Transform" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vport_shadeopen" -ln "houdiniAssetParm_vport_shadeopen" 
+		-nn "Shade Open Curves In Viewport" -min 0 -max 1 -at "bool" -p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_vport_onionskin" -ln "houdiniAssetParm_vport_onionskin" 
+		-nn "Onion Skinning" -min 0 -max 2 -en "Off:Transform only:Full Deformation" -at "enum" 
+		-p "houdiniAssetParm_stdswitcher4_2__folder";
+	addAttr -is true -ci true -sn "houdiniAssetParm_renderable" -ln "houdiniAssetParm_renderable" 
+		-nn "Renderable" -min 0 -max 1 -at "bool" -p "houdiniAssetParm";
+	addAttr -is true -ci true -sn "houdiniAssetParm_seed" -ln "houdiniAssetParm_seed" 
+		-nn "Seed" -smn 0 -smx 10 -at "float" -p "houdiniAssetParm";
+	addAttr -is true -ci true -sn "houdiniAssetParm_size" -ln "houdiniAssetParm_size" 
+		-nn "Size" -at "compound" -p "houdiniAssetParm" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_size__tuple0" -ln "houdiniAssetParm_size__tuple0" 
+		-nn "Size 0" -at "float" -p "houdiniAssetParm_size";
+	addAttr -is true -ci true -sn "houdiniAssetParm_size__tuple1" -ln "houdiniAssetParm_size__tuple1" 
+		-nn "Size 1" -at "float" -p "houdiniAssetParm_size";
+	addAttr -is true -ci true -sn "houdiniAssetParm_size__tuple2" -ln "houdiniAssetParm_size__tuple2" 
+		-nn "Size 2" -at "float" -p "houdiniAssetParm_size";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s2" -ln "houdiniAssetParm_s2" -nn "Scale" 
+		-at "compound" -p "houdiniAssetParm" -nc 3;
+	addAttr -is true -ci true -sn "houdiniAssetParm_s2__tuple0" -ln "houdiniAssetParm_s2__tuple0" 
+		-nn "Scale 0" -at "float" -p "houdiniAssetParm_s2";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s2__tuple1" -ln "houdiniAssetParm_s2__tuple1" 
+		-nn "Scale 1" -at "float" -p "houdiniAssetParm_s2";
+	addAttr -is true -ci true -sn "houdiniAssetParm_s2__tuple2" -ln "houdiniAssetParm_s2__tuple2" 
+		-nn "Scale 2" -at "float" -p "houdiniAssetParm_s2";
+	setAttr ".otlFilePath" -type "string" "C:/Users/nova7/OneDrive/Documents/houdini19.5/otls/object_nova7.dev.FloatingRock2.2.0.hdanc";
+	setAttr ".assetName" -type "string" "nova7::dev::Object/FloatingRock2::2.0";
+	setAttr ".outputMaterials[0].outputMaterialPath" -type "string" "uvquickshade1/shop_definition/texture_material/v_layered1";
+	setAttr -cb on ".houdiniAssetParm_s__tuple0" 1;
+	setAttr -cb on ".houdiniAssetParm_s__tuple1" 1;
+	setAttr -cb on ".houdiniAssetParm_s__tuple2" 1;
+	setAttr -cb on ".houdiniAssetParm_scale" 1;
+	setAttr -cb on ".houdiniAssetParm_shop_materialpath__node" -1;
+	setAttr -l on -cb on ".houdiniAssetParm_display" 1;
+	setAttr ".houdiniAssetParm_categories" -type "string" "";
+	setAttr ".houdiniAssetParm_reflectmask" -type "string" "*";
+	setAttr ".houdiniAssetParm_refractmask" -type "string" "*";
+	setAttr ".houdiniAssetParm_lightmask" -type "string" "*";
+	setAttr ".houdiniAssetParm_lightcategories" -type "string" "*";
+	setAttr ".houdiniAssetParm_vm_lpetag" -type "string" "";
+	setAttr -cb on ".houdiniAssetParm_vm_volumefilterwidth" 1;
+	setAttr -cb on ".houdiniAssetParm_vm_shadingquality" 1;
+	setAttr -cb on ".houdiniAssetParm_vm_flatness" 0.05000000074505806;
+	setAttr -cb on ".houdiniAssetParm_shop_geometrypath__node" -1;
+	setAttr -cb on ".houdiniAssetParm_vm_forcegeometry" yes;
+	setAttr -cb on ".houdiniAssetParm_vm_renderpoints" 2;
+	setAttr -cb on ".houdiniAssetParm_vm_pointscale" 1;
+	setAttr -cb on ".houdiniAssetParm_vm_coving" 1;
+	setAttr -cb on ".houdiniAssetParm_vm_materialoverride" 2;
+	setAttr -cb on ".houdiniAssetParm_vm_procuseroottransform" yes;
+	setAttr -l on -cb on ".houdiniAssetParm_dcolor" -type "float3" 1 1 1 ;
+	setAttr -l on -cb on ".houdiniAssetParm_dcolor";
+	setAttr -cb on ".houdiniAssetParm_picking" yes;
+	setAttr ".houdiniAssetParm_pickscript" -type "string" "";
+	setAttr -cb on ".houdiniAssetParm_caching" yes;
+	setAttr -cb on ".houdiniAssetParm_renderable" yes;
+	setAttr -cb on ".houdiniAssetParm_size__tuple0" 2;
+	setAttr -cb on ".houdiniAssetParm_size__tuple1" 5;
+	setAttr -cb on ".houdiniAssetParm_size__tuple2" 2;
+	setAttr -cb on ".houdiniAssetParm_s2__tuple0" 4;
+	setAttr -cb on ".houdiniAssetParm_s2__tuple1" 3;
+	setAttr -cb on ".houdiniAssetParm_s2__tuple2" 3;
+createNode transform -n "FloatingRock3" -p "nova7__dev__FloatingRock2__2_02";
+	rename -uid "11A31171-47E6-08E7-8DE1-B3904E4AC189";
+createNode transform -n "autouv1_0" -p "FloatingRock3";
+	rename -uid "7186C1E3-4D40-2C55-964C-DEAD525C497F";
+	setAttr ".t" -type "double3" -25.97249642685869 6.2739894751996905 0 ;
+createNode mesh -n "autouv1_0Shape" -p "|nova7__dev__FloatingRock2__2_02|FloatingRock3|autouv1_0";
+	rename -uid "585CC1D7-4E65-521A-F23D-6299EB053A79";
+	addAttr -ci true -sn "index" -ln "index" -dt "Int32Array";
+	addAttr -ci true -sn "pscale" -ln "pscale" -dt "vectorArray";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "uv";
+	setAttr ".cuvs" -type "string" "uv";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".ccls" -type "string" "";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B35CF23A-49BE-6286-0D77-A8AA25610558";
-	setAttr -s 34 ".lnk";
-	setAttr -s 34 ".slnk";
+	rename -uid "06E9901A-488B-7813-9006-41B6FB25D0C1";
+	setAttr -s 36 ".lnk";
+	setAttr -s 36 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "551E8CCD-44E7-8EB4-2952-6597AF7BB2FC";
+	rename -uid "AE9A1C36-4B78-C95C-8B5E-F78173F45534";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4DEC89A2-4C73-CC34-0BA0-838CEAEB47E3";
+	rename -uid "B1BBB8D7-49BA-66F4-DE8C-BE96D2EC1A58";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B72238C7-47BA-E327-F8C4-9C939110B6E6";
+	rename -uid "D5FFB2F5-4DA8-22CE-F69F-58B267605360";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "11B1773F-497A-C374-2345-239B0E820762";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "83730A4F-4FD0-7F66-D95E-8A95C50C577A";
+	rename -uid "31D39475-4B2B-06D5-C88D-BC806F4053BA";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "9D3FCA9D-4CF3-298F-778E-E18A409AACDC";
 	setAttr ".g" yes;
@@ -1678,7 +2171,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
 		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
-		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1483\n            -height 804\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1229\n            -height 785\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n"
 		+ "            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n"
 		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
@@ -1704,11 +2197,11 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererOverrideName \"stereoOverrideVP2\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
 		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n"
 		+ "                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
-		+ "                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
-		+ "            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n"
-		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1483\\n    -height 804\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1483\\n    -height 804\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
+		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
+		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1229\\n    -height 785\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1229\\n    -height 785\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -1881,13 +2374,14 @@ createNode aiStandardSurface -n "BrownRockCrystal";
 createNode shadingEngine -n "set1";
 	rename -uid "E4ABBA28-411B-2304-2767-5FA76913DFDC";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo7";
 	rename -uid "8F10E7B1-4137-205B-9E14-7EA323C73C88";
 createNode bump2d -n "bump2d1";
 	rename -uid "E2EB68CD-472F-CBB3-73B2-428DD74B7128";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc1" -type "float3" 0 3.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode displacementShader -n "displacementShader1";
 	rename -uid "2C860C70-4923-F624-A790-31B5D01584F9";
@@ -2040,7 +2534,7 @@ createNode materialInfo -n "materialInfo8";
 createNode bump2d -n "bump2d2";
 	rename -uid "4B896F0A-4536-EB27-285A-72B3B8E42923";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode displacementShader -n "displacementShader2";
 	rename -uid "35AF9AEA-4D52-6212-F2E4-63B9ED1A8B21";
@@ -2177,7 +2671,7 @@ createNode materialInfo -n "materialInfo9";
 createNode bump2d -n "bump2d3";
 	rename -uid "C06A45CB-455C-A76E-419D-6C927D1365CA";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode displacementShader -n "displacementShader3";
 	rename -uid "49E42620-4EF5-CF48-294F-A6AAEB0AAEE4";
@@ -2295,7 +2789,7 @@ createNode materialInfo -n "materialInfo10";
 createNode bump2d -n "bump2d4";
 	rename -uid "5C851003-48F0-D6BD-3587-4493403BD421";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode displacementShader -n "displacementShader4";
 	rename -uid "9DCFFA7A-4BFC-9759-8E66-339DD290DFC3";
@@ -2634,7 +3128,7 @@ createNode materialInfo -n "materialInfo13";
 createNode bump2d -n "bump2d7";
 	rename -uid "0BF304F2-4DDA-4A48-3016-A2A66EDF6B89";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode displacementShader -n "displacementShader7";
 	rename -uid "A78529BE-44A7-303B-04E0-0FB55447C5C2";
@@ -2775,13 +3269,35 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[16].x" 195.71427917480469;
 	setAttr ".tgi[0].ni[16].y" -371.42855834960938;
 	setAttr ".tgi[0].ni[16].nvs" 1923;
+createNode phong -n "v_layered7";
+	rename -uid "67457537-4019-CFF8-11DE-9DBAE005B4DB";
+createNode shadingEngine -n "v_layered7SG";
+	rename -uid "24A5ECE2-4A2E-F4A6-104A-F5BFE982AC49";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo15";
+	rename -uid "39362291-4E4C-DF04-ABDB-E9823EBF523D";
+createNode groupId -n "groupId16";
+	rename -uid "D19978E9-41B8-61D3-9A6B-0AB8C3940F05";
+	setAttr ".ihi" 0;
+createNode phong -n "v_layered8";
+	rename -uid "252DEA6A-475E-19CE-C2AA-3B9A825F2279";
+createNode shadingEngine -n "v_layered8SG";
+	rename -uid "7A09EB1C-4818-7E14-641E-4EBC1936AE9A";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo16";
+	rename -uid "F0DD4B07-4273-6443-DEFD-DC9D80130C1A";
+createNode groupId -n "groupId18";
+	rename -uid "0FE8E116-471D-38A5-A13B-08A2939BC46E";
+	setAttr ".ihi" 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 117;
-	setAttr -av -k on ".unw" 117;
+	setAttr -k on ".o" 1;
+	setAttr -av -k on ".unw" 1;
 	setAttr -av -k on ".etw";
 	setAttr -av -k on ".tps";
 	setAttr -av -k on ".tms";
@@ -2804,7 +3320,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 34 ".st";
+	setAttr -s 36 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -2817,7 +3333,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 45 ".s";
+	setAttr -s 47 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -3013,6 +3529,26 @@ connectAttr "nova7__dev__SciFiStructure__1_01.outputObjects[0].outputObjectScale
 		;
 connectAttr "nova7__dev__SciFiStructure__1_01.outputObjects[0].outputGeos[0].outputParts[0].outputPartMeshData" "|nova7__dev__SciFiStructure__1_01|SciFiStructure1|uvflatten1_0|uvflatten1_0Shape.i"
 		;
+connectAttr ":time1.o" "nova7__dev__FloatingRock2__2_01.inTime";
+connectAttr "nova7__dev__FloatingRock2__2_01.outputObjects[0].outputObjectTranslate" "FloatingRock2.t"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_01.outputObjects[0].outputObjectRotate" "FloatingRock2.r"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_01.outputObjects[0].outputObjectScale" "FloatingRock2.s"
+		;
+connectAttr ":time1.o" "nova7__dev__FloatingRock2__2_02.inTime";
+connectAttr "nova7__dev__FloatingRock2__2_02.outputObjects[0].outputObjectTranslate" "FloatingRock3.t"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_02.outputObjects[0].outputObjectRotate" "FloatingRock3.r"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_02.outputObjects[0].outputObjectScale" "FloatingRock3.s"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_02.outputObjects[0].outputGeos[0].outputParts[0].outputPartMeshData" "|nova7__dev__FloatingRock2__2_02|FloatingRock3|autouv1_0|autouv1_0Shape.i"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_02.outputObjects[0].outputGeos[0].outputParts[0].outputPartExtraAttributes[0].outputPartExtraAttributeData" "|nova7__dev__FloatingRock2__2_02|FloatingRock3|autouv1_0|autouv1_0Shape.index"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_02.outputObjects[0].outputGeos[0].outputParts[0].outputPartExtraAttributes[1].outputPartExtraAttributeData" "|nova7__dev__FloatingRock2__2_02|FloatingRock3|autouv1_0|autouv1_0Shape.pscale"
+		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "v_layered1SG.message" ":defaultLightSet.message";
@@ -3029,6 +3565,8 @@ relationship "link" ":lightLinker1" "set5.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "set6.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "set7.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "set8.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "v_layered7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "v_layered8SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "v_layered1SG.message" ":defaultLightSet.message";
@@ -3045,6 +3583,8 @@ relationship "shadowLink" ":lightLinker1" "set5.message" ":defaultLightSet.messa
 relationship "shadowLink" ":lightLinker1" "set6.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "set7.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "set8.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "v_layered7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "v_layered8SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
@@ -3329,6 +3869,8 @@ connectAttr "file1.oa" "BrownRockCrystal.metalness";
 connectAttr "BrownRockCrystal.out" "set1.ss";
 connectAttr "displacementShader1.d" "set1.ds";
 connectAttr "|nova7__dev__FloatingRock__1_01|FloatingRock1|autouv1_0|autouv1_0Shape.iog" "set1.dsm"
+		 -na;
+connectAttr "|nova7__dev__FloatingRock2__2_02|FloatingRock3|autouv1_0|autouv1_0Shape.iog" "set1.dsm"
 		 -na;
 connectAttr "set1.msg" "materialInfo7.sg";
 connectAttr "BrownRockCrystal.msg" "materialInfo7.m";
@@ -4908,6 +5450,28 @@ connectAttr "set8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].d
 		;
 connectAttr "file52.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
 		;
+connectAttr "nova7__dev__FloatingRock2__2_01.outputMaterials[0].outputMaterialDiffuseColor" "v_layered7.c"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_01.outputMaterials[0].outputMaterialSpecularColor" "v_layered7.sc"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_01.outputMaterials[0].outputMaterialAmbientColor" "v_layered7.ambc"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_01.outputMaterials[0].outputMaterialAlphaColor" "v_layered7.it"
+		;
+connectAttr "v_layered7.oc" "v_layered7SG.ss";
+connectAttr "v_layered7SG.msg" "materialInfo15.sg";
+connectAttr "v_layered7.msg" "materialInfo15.m";
+connectAttr "nova7__dev__FloatingRock2__2_02.outputMaterials[0].outputMaterialDiffuseColor" "v_layered8.c"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_02.outputMaterials[0].outputMaterialSpecularColor" "v_layered8.sc"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_02.outputMaterials[0].outputMaterialAmbientColor" "v_layered8.ambc"
+		;
+connectAttr "nova7__dev__FloatingRock2__2_02.outputMaterials[0].outputMaterialAlphaColor" "v_layered8.it"
+		;
+connectAttr "v_layered8.oc" "v_layered8SG.ss";
+connectAttr "v_layered8SG.msg" "materialInfo16.sg";
+connectAttr "v_layered8.msg" "materialInfo16.m";
 connectAttr "v_layered1SG.pa" ":renderPartition.st" -na;
 connectAttr "v_layered2SG.pa" ":renderPartition.st" -na;
 connectAttr "v_layered3SG.pa" ":renderPartition.st" -na;
@@ -4922,6 +5486,8 @@ connectAttr "set5.pa" ":renderPartition.st" -na;
 connectAttr "set6.pa" ":renderPartition.st" -na;
 connectAttr "set7.pa" ":renderPartition.st" -na;
 connectAttr "set8.pa" ":renderPartition.st" -na;
+connectAttr "v_layered7SG.pa" ":renderPartition.st" -na;
+connectAttr "v_layered8SG.pa" ":renderPartition.st" -na;
 connectAttr "v_layered1.msg" ":defaultShaderList1.s" -na;
 connectAttr "v_layered2.msg" ":defaultShaderList1.s" -na;
 connectAttr "v_layered3.msg" ":defaultShaderList1.s" -na;
@@ -4944,6 +5510,8 @@ connectAttr "SciFiFloor2.msg" ":defaultShaderList1.s" -na;
 connectAttr "displacementShader7.msg" ":defaultShaderList1.s" -na;
 connectAttr "SciFiCircuit.msg" ":defaultShaderList1.s" -na;
 connectAttr "displacementShader8.msg" ":defaultShaderList1.s" -na;
+connectAttr "v_layered7.msg" ":defaultShaderList1.s" -na;
+connectAttr "v_layered8.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "multiplyDivide1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
