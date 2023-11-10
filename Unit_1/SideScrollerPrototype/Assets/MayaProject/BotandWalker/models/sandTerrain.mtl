@@ -1,0 +1,129 @@
+newmtl PlayerAnims:Ultimate_Walker_Rig:Shdr_ball_turuncu2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.66 0.66 0.66
+Ns 7.17
+newmtl PlayerAnims:phong1SG
+illum 4
+Kd 0.67 0.67 0.67
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl RobotAnims_0010:PALBot:FACE_SHD1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl RobotAnims_0010:PALBot:PANDARIG_v01:lambert8SG
+illum 4
+Kd 0.09 0.50 0.87
+Ka 0.00 0.00 0.00
+Tf 0.41 0.41 0.41
+Ni 1.00
+newmtl RobotAnims_0010:PALBot:PANDARIG_v02:lambert7SG
+illum 4
+Kd 0.11 0.12 0.77
+Ka 0.51 0.51 0.51
+Tf 0.00 0.00 0.00
+Ni 1.00
+Ks 0.23 0.23 0.23
+newmtl RobotAnims_0010:PALBot:blinn1SG
+illum 4
+Kd 0.92 0.92 0.92
+Ka 0.09 0.09 0.09
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.75 0.76 0.93
+newmtl RobotAnims_0010:PALBot:blinn2SG
+illum 4
+Kd 0.00 0.00 0.01
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.55 0.55 0.55
+newmtl RobotAnims_0010:PALBot:blinn5SG
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 0.43 0.20 0.00
+Ni 1.00
+Ks 0.63 0.82 1.00
+newmtl RobotAnims_0010:PALBot:blinn6SG
+illum 4
+Kd 0.03 0.03 0.03
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.18 0.18 0.18
+newmtl RobotAnims_0010:PALBot:lambert3SG
+illum 4
+Kd 0.00 1.00 0.19
+Ka 0.83 0.83 0.83
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl RobotAnims_0010:PALBot:surfaceShader2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl RobotAnims_0010:PALBot:surfaceShader6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl RobotAnims_0010:PALBot:surfaceShader7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl RobotAnims_0010:PALBot:surfaceShader8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl RobotAnims_0010:PALBot:surfaceShader9SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl RobotAnims_0010:PALBot:surfaceShader14SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl RobotAnims_0010:PALBot:surfaceShader15SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl set2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
+newmtl standardSurface1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 0.00
