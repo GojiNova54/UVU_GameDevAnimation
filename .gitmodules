@@ -4,3 +4,9 @@
 [submodule "Tools/UVU_GameDev1_Fall2023\\Unit_1\\SideScrollerPrototype\\Assets"]
 	path = Tools/UVU_GameDev1_Fall2023\\Unit_1\\SideScrollerPrototype\\Assets
 	url = https://github.com/anthonyromrell/ArtisanDream.Tools.git
+[submodule "Tools/SideScrollerPrototype\\Assets"]
+	path = Tools/SideScrollerPrototype\\Assets
+	url = D:\\GitRepos\\UVU_GameDev1_Fall2023\\Unit_1\\SideScrollerPrototype\\Assets
+[submodule "Tools/Unit_1/SideScrollerPrototype/Assets"]
+	path = Tools/Unit_1/SideScrollerPrototype/Assets
+	url = https://github.com/anthonyromrell/ArtisanDream.Tools.git
