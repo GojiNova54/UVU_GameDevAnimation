@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class CharacterSideScroller : MonoBehaviour
+public class CharacterSideScroller2 : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float runSpeed = 10f; // Speed when running

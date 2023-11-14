@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class AgentBehaviour : MonoBehaviour
+public class AgentBehaviour2 : MonoBehaviour
 {
     private NavMeshAgent agent;
     public Transform player;

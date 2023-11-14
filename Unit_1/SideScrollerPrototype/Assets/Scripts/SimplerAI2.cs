@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SimplerAI : MonoBehaviour
+public class SimplerAI2 : MonoBehaviour
 {
     private NavMeshAgent agent;
     public Transform playerTransformObj;

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TriggerEventsBehaviour : MonoBehaviour
+public class TriggerEventsBehaviour2 : MonoBehaviour
 {
      public UnityEvent startEvent, triggerEnterEvent, triggerEnterRepeatEvent, triggerEnterEndEvent, triggerExitEvent;
      public float delayTime = 0.01f;

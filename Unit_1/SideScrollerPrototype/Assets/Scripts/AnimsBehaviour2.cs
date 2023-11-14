@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AnimsBehaviour : MonoBehaviour
+public class AnimsBehaviour2 : MonoBehaviour
 {
     public Animator animator;
     private bool isArrowEventCall;

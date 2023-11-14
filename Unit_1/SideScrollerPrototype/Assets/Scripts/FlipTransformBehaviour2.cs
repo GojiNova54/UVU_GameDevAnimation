@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class FlipTransformBehaviour : MonoBehaviour
+public class FlipTransformBehaviour2 : MonoBehaviour
 {
     public UnityEvent key1Event, key2Event, keyOffEvent;
     public KeyCode key1 = KeyCode.LeftArrow, key2 = KeyCode.RightArrow;
