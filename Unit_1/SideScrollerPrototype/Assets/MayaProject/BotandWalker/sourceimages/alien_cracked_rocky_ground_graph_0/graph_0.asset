@@ -231,7 +231,28 @@ MonoBehaviour:
   MaterialShader: Standard
   RenderTextures: 0
   OutputRemaped: 0
-  Presets: []
+  Presets:
+  - Info:
+      Label: Low Glow Cracks
+      Description: 
+      URL: pkg://alien_cracked_rocky_ground
+    PresetIndex: 0
+    PresetValue: 
+    NativePreset: 1
+  - Info:
+      Label: Lava Glow
+      Description: 
+      URL: pkg://alien_cracked_rocky_ground
+    PresetIndex: 1
+    PresetValue: 
+    NativePreset: 1
+  - Info:
+      Label: Green Glow
+      Description: 
+      URL: pkg://alien_cracked_rocky_ground
+    PresetIndex: 2
+    PresetValue: 
+    NativePreset: 1
   references:
     version: 2
     RefIds:
