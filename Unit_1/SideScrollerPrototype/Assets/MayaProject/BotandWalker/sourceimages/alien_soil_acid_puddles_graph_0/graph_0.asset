@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: graph_0
   m_EditorClassIdentifier: 
   AssetPath: Assets/MayaProject/BotandWalker/sourceimages/alien_soil_acid_puddles.sbsar
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: fa8aa2d636292df4e84947d0944d8d6e, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
       Index: 0
       Type: 8
       Channel: diffuse
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 2db9a2fa2929670489969feb76a38bf1, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: f39e172b941a0ab459220cf53b984a89, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
       Index: 2
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 6d34d75d87f8f19449f3b40d975e4fad, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
       Index: 6
       Type: 8
       Channel: metallic
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 85731697c0d9ad44da93ce1fd678bf5b, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
       Index: 7
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 991d6e2edcfdd2349bc5015ed7076323, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -190,7 +190,7 @@ MonoBehaviour:
       Index: 8
       Type: 8
       Channel: ambientOcclusion
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 996a1441e576a884c8f7d9d6c10f3230, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -223,11 +223,11 @@ MonoBehaviour:
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: e9b150f5dc8a5ae419fa0d9167f0683d, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://alien_soil_acid_puddles\" label=\"\"
     >\n  <presetinput identifier=\"$outputsize\" uid=\"3351078915\" type=\"8\" value=\"10,10\"
     />\n </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: Standard
   RenderTextures: 0
   OutputRemaped: 0
   Presets: []

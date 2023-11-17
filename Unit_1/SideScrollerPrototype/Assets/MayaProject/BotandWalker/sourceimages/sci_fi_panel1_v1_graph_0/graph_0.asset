@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: graph_0
   m_EditorClassIdentifier: 
   AssetPath: Assets/MayaProject/BotandWalker/sourceimages/sci_fi_panel1_v1.sbsar
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: 4b29b515d6510474e93635641c44ce23, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
       Index: 0
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: abda43973ab0807429d7b2185f4ee948, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -56,7 +56,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: edf96a9fb9912824da982031c670e44f, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
       Index: 3
       Type: 8
       Channel: metallic
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: e1b954246ad9a1e409025598d406ef15, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -104,7 +104,7 @@ MonoBehaviour:
       Index: 4
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: a545bebe896de5745b128b91d77edd7f, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
       Index: 5
       Type: 8
       Channel: ambientOcclusion
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 60974e58b89ff7f4e899627d68260207, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -136,7 +136,7 @@ MonoBehaviour:
       Index: 6
       Type: 8
       Channel: emissive
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 8f92ab002887d0f4abeff1ab1f912326, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -153,11 +153,11 @@ MonoBehaviour:
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: d95e5fe591c6b4a4b84a9784f038854f, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://Sci_fi_Panel1_v1\" label=\"\" >\n  <presetinput
     identifier=\"$outputsize\" uid=\"762415799\" type=\"8\" value=\"10,10\" />\n
     </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: Standard
   RenderTextures: 0
   OutputRemaped: 0
   Presets: []

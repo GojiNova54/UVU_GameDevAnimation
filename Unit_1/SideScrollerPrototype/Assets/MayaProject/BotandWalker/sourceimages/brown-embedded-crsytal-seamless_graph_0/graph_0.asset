@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: graph_0
   m_EditorClassIdentifier: 
   AssetPath: Assets/MayaProject/BotandWalker/sourceimages/brown-embedded-crsytal-seamless.sbsar
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: 4e22db5ea4e940d4f8e9b58dcfefe0ee, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
       Index: 0
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 888f119afd8ce0b47a424727b23e5f9c, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -47,7 +47,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 62408cf26a2852c4a94e152e76947f5e, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
       Index: 3
       Type: 8
       Channel: metallic
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 3437882945fe1d043b45fe5c90f10bce, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
       Index: 4
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: b6864fe6530a4704ba1cf42a03b21c0f, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -111,7 +111,7 @@ MonoBehaviour:
       Index: 5
       Type: 8
       Channel: ambientOcclusion
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 847024f529db4d14998d7ddd56f5e35f, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -144,11 +144,11 @@ MonoBehaviour:
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: bf59c3a5dc4bb5e499e8ea66ce19cbbe, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://Cave_Wall_Crystals\" label=\"\" >\n 
     <presetinput identifier=\"$outputsize\" uid=\"1186027417\" type=\"8\" value=\"10,10\"
     />\n </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: Standard
   RenderTextures: 0
   OutputRemaped: 0
   Presets: []

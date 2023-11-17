@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: graph_0
   m_EditorClassIdentifier: 
   AssetPath: Assets/MayaProject/BotandWalker/sourceimages/moon.sbsar
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: 2d0bf0f6384373846965cd145aefc0b2, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
       Index: 0
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 7e43a933b83563f48ac7dc2cf018c7c7, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -47,7 +47,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 7a09882f0378d5a4286bdd927c0bdac9, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
       Index: 3
       Type: 8
       Channel: metallic
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 41052636e34e7364a971c9fbe868e35c, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
       Index: 4
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: c4472cb2eed8d754ba0ae090103eb455, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -111,7 +111,7 @@ MonoBehaviour:
       Index: 5
       Type: 8
       Channel: ambientOcclusion
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: dd479809647808a4dbfc8589cb2b896d, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -128,11 +128,11 @@ MonoBehaviour:
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: 32c65d5de90d52c458f5d294af967a47, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://Substance_\u30B0\u30E9\u30D5\" label=\"\"
     >\n  <presetinput identifier=\"$outputsize\" uid=\"692230601\" type=\"8\" value=\"10,10\"
     />\n </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: Standard
   RenderTextures: 0
   OutputRemaped: 0
   Presets: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: graph_0
   m_EditorClassIdentifier: 
   AssetPath: Assets/MayaProject/BotandWalker/sourceimages/abstractwall.sbsar
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: 2337758e7c1ce80439a20588ea3f1d83, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
       Index: 0
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: c732525e07c9d354aa5cf00fa55cffa4, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -46,7 +46,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: e03719206a0b7d843a84fc93e8663bd3, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
       Index: 2
       Type: 8
       Channel: emissive
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 19caa545fd4c54e4c9fd09adf8bb847f, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
       Index: 4
       Type: 8
       Channel: metallic
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 58769d8847a48714ea0e2f8f35c99318, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -110,7 +110,7 @@ MonoBehaviour:
       Index: 5
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 92c8e6433de640842a268cb676460820, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -126,7 +126,7 @@ MonoBehaviour:
       Index: 6
       Type: 8
       Channel: ambientOcclusion
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: b79cc4b7d388f1c4a8011d86e1d2fe26, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -143,11 +143,11 @@ MonoBehaviour:
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: 1dd8707e8ab69d344a9b57053ba094c6, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://AbstractWalll\" label=\"\" >\n  <presetinput
     identifier=\"$outputsize\" uid=\"2192428624\" type=\"8\" value=\"10,10\" />\n
     </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: Standard
   RenderTextures: 0
   OutputRemaped: 0
   Presets: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: graph_0
   m_EditorClassIdentifier: 
   AssetPath: Assets/MayaProject/BotandWalker/sourceimages/alien_ship_techno_panel.sbsar
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: c952aa9e84674164cb9a0cb95f4feb82, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
       Index: 0
       Type: 8
       Channel: diffuse
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 568d986841c95744182c8fa710c2b788, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -76,7 +76,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: f28d41a8ffbffd341850ca598209223e, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -92,7 +92,7 @@ MonoBehaviour:
       Index: 2
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 6132ae0138828994caba0cd1bf729a4e, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
       Index: 4
       Type: 8
       Channel: emissive
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: f30e88eaf7af5034c8c785f137e06785, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -172,7 +172,7 @@ MonoBehaviour:
       Index: 7
       Type: 8
       Channel: metallic
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: e8dde5e8738fa124f87c33ba36da1bb5, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -188,7 +188,7 @@ MonoBehaviour:
       Index: 8
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 7606acfb9e3154a4999c191e1c00c0de, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -204,7 +204,7 @@ MonoBehaviour:
       Index: 9
       Type: 8
       Channel: ambientOcclusion
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: b6f43983ab161614e96f326ae0dd9785, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -221,11 +221,11 @@ MonoBehaviour:
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: 5a746bebb677a6b42bef105dee310ae9, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://alien_ship_techno_panel\" label=\"\"
     >\n  <presetinput identifier=\"$outputsize\" uid=\"2851049274\" type=\"8\" value=\"10,10\"
     />\n </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: Standard
   RenderTextures: 0
   OutputRemaped: 0
   Presets: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: graph_0
   m_EditorClassIdentifier: 
   AssetPath: Assets/MayaProject/BotandWalker/sourceimages/sand_01.sbsar
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: d713b8f3ebfdf044db6a492871955514, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
       Index: 0
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 0e49eeb5c65712b4abb4b1204e07f101, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: aa7f129437a60aa4abc55715c481859b, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
       Index: 3
       Type: 8
       Channel: metallic
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: ac4d9f039d31e8444bf16e7699719d1e, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -100,7 +100,7 @@ MonoBehaviour:
       Index: 4
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 3fe8bbd77a2f7784cb883ee6041f2e9a, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -116,7 +116,7 @@ MonoBehaviour:
       Index: 5
       Type: 8
       Channel: ambientOcclusion
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: ee917cdd73638b049a5b71b3d094b119, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -132,7 +132,7 @@ MonoBehaviour:
       Index: 6
       Type: 8
       Channel: diffuse
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 1244d6d087927b442a5d6d9796f299c1, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -181,11 +181,11 @@ MonoBehaviour:
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: 47779be903ca3c843bf973685b71f4c9, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://sand_01\" label=\"\" >\n  <presetinput
     identifier=\"$outputsize\" uid=\"3365996406\" type=\"8\" value=\"10,10\" />\n
     </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: Standard
   RenderTextures: 0
   OutputRemaped: 0
   Presets: []
