@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1433444366938377295
+--- !u!1 &2566025605065545268
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4295196193431915217}
-  - component: {fileID: 7006891778637710702}
-  - component: {fileID: 3667054912376255372}
-  - component: {fileID: 8965462578059697097}
+  - component: {fileID: 4718359524336200054}
+  - component: {fileID: 5452578500660494518}
+  - component: {fileID: 8644276169141329073}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: GemPowerUp2_bakedHDA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4295196193431915217
+--- !u!4 &4718359524336200054
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433444366938377295}
+  m_GameObject: {fileID: 2566025605065545268}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.02, y: 2.35, z: -8.31}
-  m_LocalScale: {x: 0.8329507, y: 12.12, z: 4.1325}
+  m_LocalRotation: {x: -0, y: 0.7086693, z: -0, w: 0.70554084}
+  m_LocalPosition: {x: 2.0590668, y: -0.033325195, z: 0.023584366}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1224598196867424999}
+  m_Father: {fileID: 5622574908156298104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7006891778637710702
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433444366938377295}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3667054912376255372
+--- !u!23 &5452578500660494518
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433444366938377295}
+  m_GameObject: {fileID: 2566025605065545268}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +53,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2d160e00d5487164dbd4eb0fd083a972, type: 2}
+  - {fileID: 2100000, guid: 11fdcef8ef3b9074786a062e753da55a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,28 +75,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8965462578059697097
-BoxCollider:
+--- !u!33 &8644276169141329073
+MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433444366938377295}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.7442422, y: 1, z: 0.9999999}
-  m_Center: {x: -0.3721209, y: 0, z: 0.000000057693544}
---- !u!1 &8691113131320912591
+  m_GameObject: {fileID: 2566025605065545268}
+  m_Mesh: {fileID: 4300000, guid: a2cabd1f5267973458e340b91f691efa, type: 2}
+--- !u!1 &9074197124253574347
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,43 +91,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1224598196867424999}
-  - component: {fileID: 8366264162633082739}
-  - component: {fileID: 7816141241224271178}
+  - component: {fileID: 5622574908156298104}
+  - component: {fileID: 6231901711955732654}
+  - component: {fileID: 4433741497168027949}
+  - component: {fileID: 5211110070827706742}
   m_Layer: 0
-  m_Name: Door
+  m_Name: GemPowerUP 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1224598196867424999
+--- !u!4 &5622574908156298104
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8691113131320912591}
+  m_GameObject: {fileID: 9074197124253574347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 212.67024, y: 110.577156, z: 8.147194}
+  m_LocalPosition: {x: -104.3, y: 78.5, z: -0.023584366}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4295196193431915217}
+  - {fileID: 4718359524336200054}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8366264162633082739
+--- !u!95 &6231901711955732654
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8691113131320912591}
+  m_GameObject: {fileID: 9074197124253574347}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 23856f445b60b8d4fbccf7eb83dc1a19, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0f065f3dcdbda5449a7cefc5cc5c3239, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -160,41 +139,66 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7816141241224271178
+--- !u!65 &4433741497168027949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074197124253574347}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7576933, y: 1.5951538, z: 1.0475903}
+  m_Center: {x: 2.048038, y: -0.028404236, z: 0.034569696}
+--- !u!114 &5211110070827706742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8691113131320912591}
+  m_GameObject: {fileID: 9074197124253574347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65180f705bb904ee98a80edc6dcf0d55, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a28a400391344b9c88e28b4820b5ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: {fileID: 11400000, guid: f88d4d7e631e6e8419bcba3b87d65fba, type: 2}
   startEvent:
     m_PersistentCalls:
       m_Calls: []
-  respondEvent:
+  triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8366264162633082739}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
+      - m_Target: {fileID: 11400000, guid: 0718df679d593fe4e9ac33a569c6f31b, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: Open
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  respondLateEvent:
+  triggerEnterRepeatEvent:
     m_PersistentCalls:
       m_Calls: []
-  runInAnimatorEvent:
+  triggerEnterEndEvent:
     m_PersistentCalls:
       m_Calls: []
-  holdTime: 0.1
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  delayTime: 0.01
+  canRepeat: 0
+  repeatTimes: 10
