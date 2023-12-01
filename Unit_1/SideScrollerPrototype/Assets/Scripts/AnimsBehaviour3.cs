@@ -1,32 +1,28 @@
 using UnityEngine;
 
-public class AnimsBehaviour2 : MonoBehaviour
+public class AnimsBehaviour3 : MonoBehaviour
 {
     public Animator animator;
-    private readonly int idle = Animator.StringToHash("Idle");
-    private readonly int walk = Animator.StringToHash("Walk");
-    private readonly int run = Animator.StringToHash("Run");
+    private readonly int speed = Animator.StringToHash("Speed");
     private readonly int jump = Animator.StringToHash("Jump");
     private readonly int land = Animator.StringToHash("Land");
 
     private void Update()
     {
+        float inputSpeed = 0f;
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
-            animator.ResetTrigger(idle);
-            animator.SetTrigger(walk);
+            inputSpeed = 0.1f; // walking speed
         }
-        else if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            inputSpeed = 1f; // running speed
+        }
+        animator.SetFloat(speed, inputSpeed);
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger(jump);
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            animator.SetTrigger(run);
-        }
-        else
-        {
-            animator.SetTrigger(idle);
         }
     }
 
