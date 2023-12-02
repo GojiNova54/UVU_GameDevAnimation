@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c717eab22b7f9de4298dce51b8bfa68f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerHealth: {fileID: 11400000, guid: 81ada729e8012ee4fb9964f0f4674a75, type: 2}
+  - gameOverUI: {instanceID: 0}
+  - playerAnimator: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
