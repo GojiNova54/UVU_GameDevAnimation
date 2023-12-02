@@ -1,4 +1,5 @@
 import maya.cmds as cmds
+from ChangeWireframeColor import wireframeColor
 
 class WireframeColorUI():
     def __init__(self):
@@ -18,6 +19,11 @@ class WireframeColorUI():
     def columnlayout(self):
         cmds.columnLayout(adjustableColumn=True)
         self.color_slider = cmds.intSliderGrp(label='Wireframe Color', field=True, minValue=0, maxValue=31, value=0)
+        self.apply_button = cmds.button(label='Apply', command=self.on_button_click)
+
+    def on_button_click(self, *args):
+        color = cmds.intSliderGrp(self.color_slider, query=True, value=True)
+        wireframeColor(color)
 
 ui = WireframeColorUI()
 ui.create()
