@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: RobotArm.ma
-//Last modified: Thu, Jan 11, 2024 09:29:09 PM
+//Last modified: Thu, Jan 11, 2024 11:46:54 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.1.1";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "99F46C62-464A-6C0A-8BA7-128579A7FACF";
+fileInfo "UUID" "D26C3009-47B8-47EF-3CEC-F383EE87E3E2";
 createNode transform -s -n "persp";
 	rename -uid "978EB547-4E24-9AE6-C840-DABD4C157B4A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -39.158463894986646 11.640177745619186 -42.174050804977007 ;
-	setAttr ".r" -type "double3" 354.86164682687235 5984.5999999976993 -359.99999999990098 ;
+	setAttr ".t" -type "double3" -26.462021948688282 11.501920823473327 -33.153084032191515 ;
+	setAttr ".r" -type "double3" 353.06164682478749 7420.5999999998858 -359.99999999979809 ;
 	setAttr ".rp" -type "double3" -8.8817841970012523e-16 -3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 2.0108523414978428e-15 9.8717702847616709e-17 4.6920193112754439e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -23,7 +23,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".fcp" 10000000;
-	setAttr ".coi" 54.255045841431112;
+	setAttr ".coi" 39.079695652041025;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -100,8 +100,8 @@ createNode mesh -n "Ball_Joint_1Shape" -p "Ball_Joint_1";
 	setAttr ".dr" 1;
 createNode transform -n "Base";
 	rename -uid "8FF39787-4F06-43F0-884F-8E81D8B88C17";
-	setAttr ".t" -type "double3" 0 2.4936136201830736 0 ;
-	setAttr ".s" -type "double3" 1.5951840366167731 1.3006889735502716 13.425501062524832 ;
+	setAttr ".t" -type "double3" 0 2.4936136201830736 -1.3164186909967961 ;
+	setAttr ".s" -type "double3" 1.7316510218241643 1.4119620924120697 14.574044185352957 ;
 createNode mesh -n "BaseShape" -p "Base";
 	rename -uid "3937856F-4743-48F8-1FA9-CEB2094331A6";
 	setAttr -k off ".v";
