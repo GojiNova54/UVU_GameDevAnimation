@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: bot_model_lab.ma
-//Last modified: Thu, Jan 25, 2024 11:25:26 AM
+//Name: bot_model_lab.0001.ma
+//Last modified: Thu, Jan 25, 2024 11:24:00 AM
 //Codeset: 1252
 requires maya "2023";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202202161415-df43006fd3";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 22631)";
-fileInfo "UUID" "29B9225A-48C4-99E5-AC9E-81A3B288827E";
+fileInfo "UUID" "DA37D223-4AB3-98CC-CBFA-829CA3505593";
 createNode transform -s -n "persp";
 	rename -uid "EBB779B0-44CB-7CFD-F701-378E7642E03F";
 	setAttr ".v" no;
@@ -80118,4 +80118,4 @@ connectAttr "groupId547.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId548.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId549.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId550.msg" ":initialShadingGroup.gn" -na;
-// End of bot_model_lab.ma
+// End of bot_model_lab.0001.ma
