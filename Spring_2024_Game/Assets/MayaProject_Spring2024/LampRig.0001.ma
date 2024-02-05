@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: LampRig.ma
-//Last modified: Mon, Feb 05, 2024 11:21:39 AM
+//Name: LampRig.0001.ma
+//Last modified: Mon, Feb 05, 2024 11:21:48 AM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.1.1";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "4090963B-4A54-1306-AD11-479B0AC150C1";
+fileInfo "UUID" "95CA2DC2-43D2-0EA0-8645-F2AF7D11121E";
 createNode transform -s -n "persp";
 	rename -uid "86C93EC0-470A-3581-521D-70884556D0C2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 53.820789492883392 11.61391725597325 21.337455772679156 ;
-	setAttr ".r" -type "double3" 360.86164725562475 1869.7999999832102 1.4392246180959012e-16 ;
+	setAttr ".t" -type "double3" 54.090751060612483 7.6431021584075722 20.029057504080118 ;
+	setAttr ".r" -type "double3" 364.46164725562488 1870.9999999832032 0 ;
 	setAttr ".rp" -type "double3" 7.1054273576010019e-15 0 5.6843418860808015e-14 ;
 	setAttr ".rpt" -type "double3" -1.0107081518426644e-14 1.0980942445949043e-14 -1.1298672069652984e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -3920,4 +3920,4 @@ connectAttr "layerManager.dli[3]" "control_layer.id";
 connectAttr "base_geoSG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of LampRig.ma
+// End of LampRig.0001.ma
