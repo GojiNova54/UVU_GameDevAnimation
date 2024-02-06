@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: LampRigIK.ma
-//Last modified: Mon, Feb 05, 2024 12:04:31 PM
+//Last modified: Mon, Feb 05, 2024 02:58:09 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.1.1";
@@ -10,19 +10,19 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "D8ADA3B7-47D4-9715-6641-A1B6920A2F5A";
+fileInfo "UUID" "A6883081-401E-AD1B-821F-129673C74079";
 createNode transform -s -n "persp";
 	rename -uid "86C93EC0-470A-3581-521D-70884556D0C2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 78.959489249344756 17.859683671745415 25.042816442868659 ;
-	setAttr ".r" -type "double3" 356.06164730082725 2235.7999999995482 1.6206985930989051e-15 ;
+	setAttr ".t" -type "double3" 68.94735858770639 22.493704063000926 5.7189420973287701 ;
+	setAttr ".r" -type "double3" 355.46164730176434 2247.3999999994098 1.7528357433594536e-14 ;
 	setAttr ".rp" -type "double3" 7.1054273576010019e-15 0 5.6843418860808015e-14 ;
 	setAttr ".rpt" -type "double3" -1.0107081518426644e-14 1.0980942445949043e-14 -1.1298672069652984e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "504FF289-4C45-4253-2980-FE9D8E15F5CB";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 77.800281425439792;
+	setAttr ".coi" 65.787520597781921;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
