@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: ThalassotitanLowPoly.ma
-//Last modified: Fri, Feb 09, 2024 08:17:46 PM
+//Last modified: Fri, Feb 09, 2024 08:43:16 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.1.1";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "19F21607-4C7E-9888-F7E6-B2BEF5179A0D";
+fileInfo "UUID" "30E93424-4208-2B85-F80A-50A27EDDB034";
 createNode transform -s -n "persp";
 	rename -uid "145DA0F8-4A81-9C3B-B5D8-A7801D838955";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 132.40179526861488 29.79933644081607 149.23052180665471 ;
-	setAttr ".r" -type "double3" -5.7383531736077282 52.600000000001877 -6.5456889981676675e-16 ;
+	setAttr ".t" -type "double3" 120.15163432341744 23.079784575234733 114.31898389732898 ;
+	setAttr ".r" -type "double3" -3.3383531736133585 64.20000000000347 4.5673360170763051e-16 ;
 	setAttr ".rp" -type "double3" 2.4868995751603507e-14 4.4408920985006262e-15 5.6843418860808015e-14 ;
 	setAttr ".rpt" -type "double3" -3.1866688584182087e-14 6.2351014519495218e-15 6.2470673315203429e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -23,7 +23,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".ncp" 1;
-	setAttr ".coi" 134.15273981314999;
+	setAttr ".coi" 118.56468430712263;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
