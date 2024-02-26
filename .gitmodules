@@ -1,3 +1,7 @@
 [submodule "Unit_1/SideScrollerPrototype/Assets/Tools"]
 	path = Unit_1/SideScrollerPrototype/Assets/Tools
 	url = https://github.com/anthonyromrell/ArtisanDream.Tools.git
+
+[submodule "Spring_2024_Game/Assets/Tools"]
+	path = Spring_2024_Game/Assets/Tools
+	url = https://github.com/anthonyromrell/ArtisanDream.Tools.git
