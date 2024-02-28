@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: scroll_render_layers.ma
-//Last modified: Tue, Feb 27, 2024 04:21:50 PM
+//Last modified: Tue, Feb 27, 2024 05:05:11 PM
 //Codeset: 1252
 requires maya "2023";
 requires "stereoCamera" "10.0";
@@ -19,7 +19,7 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "A8150776-4347-0CCE-07AA-8A9AA8315D05";
+fileInfo "UUID" "C262E3BD-457B-2A64-977F-AFA9B3D9E36D";
 createNode transform -s -n "persp";
 	rename -uid "7F2D1672-4386-B14F-88D1-348F5C78C1A7";
 	setAttr ".v" no;
@@ -127,7 +127,7 @@ createNode transform -n "Geometry" -p "Scroll";
 createNode transform -n "Scroll_Geo" -p "Geometry";
 	rename -uid "92FD537F-48F4-BAC3-BEB1-BA848D8655D0";
 	setAttr -s 4 ".rlio[0:3]" 3 yes 0 2 no 0 1 
-		yes 0 4 yes 0;
+		yes 0 4 no 0;
 	setAttr ".rp" -type "double3" -0.02703094482421875 3.7904476970434189 1.3583412170410156 ;
 	setAttr ".sp" -type "double3" -0.02703094482421875 3.7904476970434189 1.3583412170410156 ;
 createNode mesh -n "Scroll_GeoShape" -p "Scroll_Geo";
@@ -1419,7 +1419,7 @@ createNode mesh -n "Scroll_GeoShape" -p "Scroll_Geo";
 createNode transform -n "BG" -p "Geometry";
 	rename -uid "54B8696E-4D5B-1897-B0A5-F8AA21069664";
 	setAttr -s 5 ".rlio[0:4]" 2 yes 0 5 yes 0 2 
-		no 0 3 no 0 10 yes 0;
+		no 0 3 no 0 10 no 0;
 	setAttr ".t" -type "double3" -70 0 70 ;
 	setAttr ".s" -type "double3" 634.56810252534979 634.56810252534979 634.56810252534979 ;
 createNode mesh -n "BGShape" -p "BG";
@@ -1443,7 +1443,7 @@ createNode aiSkyDomeLight -n "aiSkyDomeLightShape1" -p "aiSkyDomeLight1";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -k off ".v";
 	setAttr -s 8 ".rlio[0:7]" 2 yes 0 3 yes 0 4 
-		no 0 2 no 0 3 no 0 10 yes 0 4 yes 0 1 
+		no 0 2 no 0 3 no 0 10 no 0 4 no 0 1 
 		yes 0;
 	setAttr -s 3 ".rlio";
 	setAttr ".csh" no;
@@ -1461,7 +1461,7 @@ createNode pointLight -n "pointLightShape1" -p "pointLight1";
 	rename -uid "41ABC79E-4874-BE3E-6D52-E790ECD15467";
 	setAttr -k off ".v";
 	setAttr -s 8 ".rlio[0:7]" 2 yes 0 3 yes 0 4 
-		no 0 2 no 0 3 no 0 10 yes 0 4 yes 0 1 
+		no 0 2 no 0 3 no 0 10 no 0 4 no 0 1 
 		yes 0;
 	setAttr -s 3 ".rlio";
 	setAttr ".urs" no;
@@ -1479,7 +1479,7 @@ createNode pointLight -n "pointLightShape2" -p "pointLight2";
 	rename -uid "72442FC6-47C1-6D40-0FB0-EEB5C235FC5F";
 	setAttr -k off ".v";
 	setAttr -s 8 ".rlio[0:7]" 2 yes 0 3 yes 0 4 
-		no 0 2 no 0 3 no 0 10 yes 0 4 yes 0 1 
+		no 0 2 no 0 3 no 0 10 no 0 4 no 0 1 
 		yes 0;
 	setAttr -s 3 ".rlio";
 	setAttr ".col" 54.613492448140029;
@@ -1506,7 +1506,7 @@ createNode pointLight -n "pointLightShape3" -p "pointLight3";
 	rename -uid "4A754CE7-4607-57F2-031D-D5A73F1C07A6";
 	setAttr -k off ".v";
 	setAttr -s 8 ".rlio[0:7]" 2 yes 0 3 yes 0 4 
-		no 0 2 no 0 3 no 0 10 yes 0 4 yes 0 1 
+		no 0 2 no 0 3 no 0 10 no 0 4 no 0 1 
 		yes 0;
 	setAttr -s 3 ".rlio";
 	setAttr ".cl" -type "float3" 0.1934 0.034299999 0.0151 ;
@@ -1637,16 +1637,16 @@ createNode shadingEngine -n "aiStandardSurface1SG";
 	setAttr ".aovs[4].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[7].aov_name" -type "string" "P";
 	setAttr ".aovs[8].aov_name" -type "string" "Pref";
-	setAttr ".aovs[11].aov_name" -type "string" "shadow";
 	setAttr ".aovs[12].aov_name" -type "string" "specular";
 	setAttr ".aovs[13].aov_name" -type "string" "Z";
 	setAttr ".aovs[14].aov_name" -type "string" "ID";
 	setAttr ".aovs[15].aov_name" -type "string" "AO";
 	setAttr ".aovs[16].aov_name" -type "string" "Alpha";
-	setAttr ".aal" -type "attributeAlias" {"ai_aov_N","aiCustomAOVs[0]","ai_aov_shadow_matte"
-		,"aiCustomAOVs[10]","ai_aov_shadow","aiCustomAOVs[11]","ai_aov_specular","aiCustomAOVs[12].aovName"
-		,"ai_aov_Z","aiCustomAOVs[13].aovName","ai_aov_ID","aiCustomAOVs[14].aovName","ai_aov_AO"
-		,"aiCustomAOVs[15].aovName","ai_aov_Alpha","aiCustomAOVs[16].aovName","ai_aov_RGBA"
+	setAttr ".aovs[17].aov_name" -type "string" "shadow_matte";
+	setAttr ".aal" -type "attributeAlias" {"ai_aov_N","aiCustomAOVs[0]","ai_aov_shadow"
+		,"aiCustomAOVs[11]","ai_aov_specular","aiCustomAOVs[12].aovName","ai_aov_Z","aiCustomAOVs[13].aovName"
+		,"ai_aov_ID","aiCustomAOVs[14].aovName","ai_aov_AO","aiCustomAOVs[15].aovName","ai_aov_Alpha"
+		,"aiCustomAOVs[16].aovName","ai_aov_shadow_matte","aiCustomAOVs[17].aovName","ai_aov_RGBA"
 		,"aiCustomAOVs[1]","ai_aov_albedo","aiCustomAOVs[3]","ai_aov_diffuse","aiCustomAOVs[4]"
 		,"ai_aov_P","aiCustomAOVs[7]","ai_aov_Pref","aiCustomAOVs[8]","ai_aov_direct","aiCustomAOVs[9]"
 		} ;
@@ -1681,7 +1681,7 @@ createNode place2dTexture -n "place2dTexture4";
 createNode bump2d -n "bump2d1";
 	rename -uid "0D48493C-45F2-869A-38F4-69822FB5821F";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 0.00060999999 0 ;
+	setAttr ".vc1" -type "float3" 0 0.00072000019 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode file -n "file5";
 	rename -uid "7FF7FB5C-4E98-1649-582A-E39FD89003CA";
@@ -1744,16 +1744,16 @@ createNode shadingEngine -n "aiStandardSurface2SG";
 	setAttr ".aovs[4].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[7].aov_name" -type "string" "P";
 	setAttr ".aovs[8].aov_name" -type "string" "Pref";
-	setAttr ".aovs[11].aov_name" -type "string" "shadow";
 	setAttr ".aovs[12].aov_name" -type "string" "specular";
 	setAttr ".aovs[13].aov_name" -type "string" "Z";
 	setAttr ".aovs[14].aov_name" -type "string" "ID";
 	setAttr ".aovs[15].aov_name" -type "string" "AO";
 	setAttr ".aovs[16].aov_name" -type "string" "Alpha";
-	setAttr ".aal" -type "attributeAlias" {"ai_aov_N","aiCustomAOVs[0]","ai_aov_shadow_matte"
-		,"aiCustomAOVs[10]","ai_aov_shadow","aiCustomAOVs[11]","ai_aov_specular","aiCustomAOVs[12].aovName"
-		,"ai_aov_Z","aiCustomAOVs[13].aovName","ai_aov_ID","aiCustomAOVs[14].aovName","ai_aov_AO"
-		,"aiCustomAOVs[15].aovName","ai_aov_Alpha","aiCustomAOVs[16].aovName","ai_aov_RGBA"
+	setAttr ".aovs[17].aov_name" -type "string" "shadow_matte";
+	setAttr ".aal" -type "attributeAlias" {"ai_aov_N","aiCustomAOVs[0]","ai_aov_shadow"
+		,"aiCustomAOVs[11]","ai_aov_specular","aiCustomAOVs[12].aovName","ai_aov_Z","aiCustomAOVs[13].aovName"
+		,"ai_aov_ID","aiCustomAOVs[14].aovName","ai_aov_AO","aiCustomAOVs[15].aovName","ai_aov_Alpha"
+		,"aiCustomAOVs[16].aovName","ai_aov_shadow_matte","aiCustomAOVs[17].aovName","ai_aov_RGBA"
 		,"aiCustomAOVs[1]","ai_aov_albedo","aiCustomAOVs[3]","ai_aov_diffuse","aiCustomAOVs[4]"
 		,"ai_aov_P","aiCustomAOVs[7]","ai_aov_Pref","aiCustomAOVs[8]","ai_aov_direct","aiCustomAOVs[9]"
 		} ;
@@ -1800,16 +1800,16 @@ createNode shadingEngine -n "aiShadowMatte1SG";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 	setAttr -s 7 ".aovs";
-	setAttr ".aovs[6].aov_name" -type "string" "shadow";
 	setAttr ".aovs[7].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[8].aov_name" -type "string" "specular";
 	setAttr ".aovs[9].aov_name" -type "string" "Z";
 	setAttr ".aovs[10].aov_name" -type "string" "ID";
 	setAttr ".aovs[11].aov_name" -type "string" "AO";
 	setAttr ".aovs[12].aov_name" -type "string" "Alpha";
+	setAttr ".aovs[13].aov_name" -type "string" "shadow_matte";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_ID","aiCustomAOVs[10].aovName","ai_aov_AO"
-		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_direct"
-		,"aiCustomAOVs[1]","ai_aov_shadow_matte","aiCustomAOVs[5]","ai_aov_shadow","aiCustomAOVs[6]"
+		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_shadow_matte"
+		,"aiCustomAOVs[13].aovName","ai_aov_direct","aiCustomAOVs[1]","ai_aov_shadow","aiCustomAOVs[6]"
 		,"ai_aov_diffuse","aiCustomAOVs[7].aovName","ai_aov_specular","aiCustomAOVs[8].aovName"
 		,"ai_aov_Z","aiCustomAOVs[9].aovName"} ;
 createNode materialInfo -n "materialInfo3";
@@ -1820,16 +1820,16 @@ createNode shadingEngine -n "aiShadowMatte2SG";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 	setAttr -s 7 ".aovs";
-	setAttr ".aovs[6].aov_name" -type "string" "shadow";
 	setAttr ".aovs[7].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[8].aov_name" -type "string" "specular";
 	setAttr ".aovs[9].aov_name" -type "string" "Z";
 	setAttr ".aovs[10].aov_name" -type "string" "ID";
 	setAttr ".aovs[11].aov_name" -type "string" "AO";
 	setAttr ".aovs[12].aov_name" -type "string" "Alpha";
+	setAttr ".aovs[13].aov_name" -type "string" "shadow_matte";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_ID","aiCustomAOVs[10].aovName","ai_aov_AO"
-		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_direct"
-		,"aiCustomAOVs[1]","ai_aov_shadow_matte","aiCustomAOVs[5]","ai_aov_shadow","aiCustomAOVs[6]"
+		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_shadow_matte"
+		,"aiCustomAOVs[13].aovName","ai_aov_direct","aiCustomAOVs[1]","ai_aov_shadow","aiCustomAOVs[6]"
 		,"ai_aov_diffuse","aiCustomAOVs[7].aovName","ai_aov_specular","aiCustomAOVs[8].aovName"
 		,"ai_aov_Z","aiCustomAOVs[9].aovName"} ;
 createNode materialInfo -n "materialInfo4";
@@ -1845,16 +1845,16 @@ createNode shadingEngine -n "aiShadowMatte3SG";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 	setAttr -s 7 ".aovs";
-	setAttr ".aovs[6].aov_name" -type "string" "shadow";
 	setAttr ".aovs[7].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[8].aov_name" -type "string" "specular";
 	setAttr ".aovs[9].aov_name" -type "string" "Z";
 	setAttr ".aovs[10].aov_name" -type "string" "ID";
 	setAttr ".aovs[11].aov_name" -type "string" "AO";
 	setAttr ".aovs[12].aov_name" -type "string" "Alpha";
+	setAttr ".aovs[13].aov_name" -type "string" "shadow_matte";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_ID","aiCustomAOVs[10].aovName","ai_aov_AO"
-		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_direct"
-		,"aiCustomAOVs[1]","ai_aov_shadow_matte","aiCustomAOVs[5]","ai_aov_shadow","aiCustomAOVs[6]"
+		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_shadow_matte"
+		,"aiCustomAOVs[13].aovName","ai_aov_direct","aiCustomAOVs[1]","ai_aov_shadow","aiCustomAOVs[6]"
 		,"ai_aov_diffuse","aiCustomAOVs[7].aovName","ai_aov_specular","aiCustomAOVs[8].aovName"
 		,"ai_aov_Z","aiCustomAOVs[9].aovName"} ;
 createNode materialInfo -n "materialInfo5";
@@ -1870,16 +1870,16 @@ createNode shadingEngine -n "aiStandardSurface3SG";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 	setAttr -s 7 ".aovs";
-	setAttr ".aovs[6].aov_name" -type "string" "shadow";
 	setAttr ".aovs[7].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[8].aov_name" -type "string" "specular";
 	setAttr ".aovs[9].aov_name" -type "string" "Z";
 	setAttr ".aovs[10].aov_name" -type "string" "ID";
 	setAttr ".aovs[11].aov_name" -type "string" "AO";
 	setAttr ".aovs[12].aov_name" -type "string" "Alpha";
+	setAttr ".aovs[13].aov_name" -type "string" "shadow_matte";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_ID","aiCustomAOVs[10].aovName","ai_aov_AO"
-		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_direct"
-		,"aiCustomAOVs[1]","ai_aov_shadow_matte","aiCustomAOVs[5]","ai_aov_shadow","aiCustomAOVs[6]"
+		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_shadow_matte"
+		,"aiCustomAOVs[13].aovName","ai_aov_direct","aiCustomAOVs[1]","ai_aov_shadow","aiCustomAOVs[6]"
 		,"ai_aov_diffuse","aiCustomAOVs[7].aovName","ai_aov_specular","aiCustomAOVs[8].aovName"
 		,"ai_aov_Z","aiCustomAOVs[9].aovName"} ;
 createNode materialInfo -n "materialInfo6";
@@ -1899,16 +1899,16 @@ createNode shadingEngine -n "aiFlat1SG";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 	setAttr -s 7 ".aovs";
-	setAttr ".aovs[6].aov_name" -type "string" "shadow";
 	setAttr ".aovs[7].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[8].aov_name" -type "string" "specular";
 	setAttr ".aovs[9].aov_name" -type "string" "Z";
 	setAttr ".aovs[10].aov_name" -type "string" "ID";
 	setAttr ".aovs[11].aov_name" -type "string" "AO";
 	setAttr ".aovs[12].aov_name" -type "string" "Alpha";
+	setAttr ".aovs[13].aov_name" -type "string" "shadow_matte";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_ID","aiCustomAOVs[10].aovName","ai_aov_AO"
-		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_direct"
-		,"aiCustomAOVs[1]","ai_aov_shadow_matte","aiCustomAOVs[5]","ai_aov_shadow","aiCustomAOVs[6]"
+		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_shadow_matte"
+		,"aiCustomAOVs[13].aovName","ai_aov_direct","aiCustomAOVs[1]","ai_aov_shadow","aiCustomAOVs[6]"
 		,"ai_aov_diffuse","aiCustomAOVs[7].aovName","ai_aov_specular","aiCustomAOVs[8].aovName"
 		,"ai_aov_Z","aiCustomAOVs[9].aovName"} ;
 createNode materialInfo -n "materialInfo7";
@@ -1923,16 +1923,16 @@ createNode shadingEngine -n "aiAmbientOcclusion1SG";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 	setAttr -s 7 ".aovs";
-	setAttr ".aovs[6].aov_name" -type "string" "shadow";
 	setAttr ".aovs[7].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[8].aov_name" -type "string" "specular";
 	setAttr ".aovs[9].aov_name" -type "string" "Z";
 	setAttr ".aovs[10].aov_name" -type "string" "ID";
 	setAttr ".aovs[11].aov_name" -type "string" "AO";
 	setAttr ".aovs[12].aov_name" -type "string" "Alpha";
+	setAttr ".aovs[13].aov_name" -type "string" "shadow_matte";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_ID","aiCustomAOVs[10].aovName","ai_aov_AO"
-		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_direct"
-		,"aiCustomAOVs[1]","ai_aov_shadow_matte","aiCustomAOVs[5]","ai_aov_shadow","aiCustomAOVs[6]"
+		,"aiCustomAOVs[11].aovName","ai_aov_Alpha","aiCustomAOVs[12].aovName","ai_aov_shadow_matte"
+		,"aiCustomAOVs[13].aovName","ai_aov_direct","aiCustomAOVs[1]","ai_aov_shadow","aiCustomAOVs[6]"
 		,"ai_aov_diffuse","aiCustomAOVs[7].aovName","ai_aov_specular","aiCustomAOVs[8].aovName"
 		,"ai_aov_Z","aiCustomAOVs[9].aovName"} ;
 createNode materialInfo -n "materialInfo8";
@@ -2051,6 +2051,7 @@ createNode renderSetupLayer -n "Background";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 createNode renderLayer -n "rs_Background";
 	rename -uid "0135246E-477B-9571-09BE-51B9187FD157";
+	setAttr ".rndr" no;
 	setAttr ".do" 1;
 createNode collection -n "collection1";
 	rename -uid "2E2075DE-4939-1214-37E8-FA98B897B8FD";
@@ -2085,13 +2086,10 @@ createNode aiAOV -n "aiAOV_ID";
 createNode aiAOVFilter -n "aiAOVFilter2";
 	rename -uid "F76C3453-4E9D-E1BE-2142-CFB5010485E2";
 	setAttr ".ai_translator" -type "string" "closest";
-createNode aiAOV -n "aiAOV_shadow";
-	rename -uid "3C38C3CD-4168-86CC-81EC-D68FC60361DB";
-	setAttr ".aoven" no;
-	setAttr ".aovn" -type "string" "shadow";
-	setAttr ".aovt" 5;
 createNode aovCollection -n "AOVCollection";
 	rename -uid "29163038-4B20-6C8A-11CC-1888B6705BCF";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode simpleSelector -n "AOVCollectionSelector";
 	rename -uid "31AFBDBD-48C0-779F-E511-D5854C29470B";
 	setAttr ".pat" -type "string" "*";
@@ -2099,26 +2097,36 @@ createNode simpleSelector -n "AOVCollectionSelector";
 	setAttr ".cfv" -type "string" "aiAOV aiAOVDriver aiAOVFilter";
 createNode aovChildCollection -n "diffuse";
 	rename -uid "AA0E5801-4B11-3EFE-C50F-04B1084887D4";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode arnoldAOVChildSelector -n "diffuseSelector";
 	rename -uid "A41FC8EC-4AF7-D16F-D907-FD9D88DB5312";
 	setAttr ".ann" -type "string" "aiAOV_diffuse";
 createNode absOverride -n "enabled";
 	rename -uid "ED5C827B-447A-465B-0A5A-588C389B0806";
 	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "enabled";
 	setAttr ".atv" yes;
+	setAttr ".es" yes;
 createNode aovChildCollection -n "specular";
 	rename -uid "59E6EF5D-4A94-21A9-629B-0CB3B16D9B47";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode arnoldAOVChildSelector -n "specularSelector";
 	rename -uid "0D1A1E4F-4C21-F6D0-3F24-558876A32916";
 	setAttr ".ann" -type "string" "aiAOV_specular";
 createNode absOverride -n "enabled1";
 	rename -uid "07D28A55-4BAD-72C2-43A6-F68522C1C884";
 	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "enabled";
 	setAttr ".atv" yes;
+	setAttr ".es" yes;
 createNode renderSettingsCollection -n "RenderSettingsCollection";
 	rename -uid "5D53563E-4CEB-E17C-45CD-4894B4FDFA77";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode simpleSelector -n "RenderSettingsCollectionSelector";
 	rename -uid "5CDCB183-4D3E-C2FE-A67F-4D840A753075";
 	setAttr ".ssl" -type "string" "defaultRenderGlobals\ndefaultResolution\ndefaultArnoldRenderOptions\ndefaultArnoldDriver\ndefaultRenderQuality\ndefaultArnoldFilter";
@@ -2126,14 +2134,17 @@ createNode simpleSelector -n "RenderSettingsCollectionSelector";
 createNode absUniqueOverride -n "endFrame";
 	rename -uid "B0ED8850-448D-4D31-056F-F7BB1B234217";
 	addAttr -ci true -sn "atv" -ln "attrValue" -at "time";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "endFrame";
 	setAttr ".tgName" -type "string" "defaultRenderGlobals";
 	setAttr ".atv" 1;
+	setAttr ".es" yes;
 createNode renderSetupLayer -n "Scroll1";
 	rename -uid "974CF1C0-4789-321F-12DC-36B371AA574B";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 createNode renderLayer -n "rs_Scroll1";
 	rename -uid "E97709B3-4950-5EC2-1CDF-D3A7B368E1FC";
+	setAttr ".rndr" no;
 	setAttr ".do" 2;
 createNode collection -n "collection2";
 	rename -uid "37C9D32A-45A8-518D-F25A-4EAC7BFA3897";
@@ -2144,6 +2155,8 @@ createNode simpleSelector -n "collection2Selector";
 	setAttr ".ssl" -type "string" "|Scroll|Geometry|Scroll_Geo";
 createNode aovCollection -n "AOVCollection1";
 	rename -uid "F2FC8F8C-4DD6-A7C5-18EF-BE8EFD5BEB0F";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode simpleSelector -n "AOVCollection1Selector";
 	rename -uid "C268D66D-4EA1-4B08-7D32-51AEDA8B06DE";
 	setAttr ".pat" -type "string" "*";
@@ -2151,30 +2164,42 @@ createNode simpleSelector -n "AOVCollection1Selector";
 	setAttr ".cfv" -type "string" "aiAOV aiAOVDriver aiAOVFilter";
 createNode aovChildCollection -n "diffuse1";
 	rename -uid "7D8F8325-4384-9711-870F-4580E4EF7B9C";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode arnoldAOVChildSelector -n "diffuse1Selector";
 	rename -uid "4D4D4FAF-4C80-1D46-7983-D78E8245C2CB";
 	setAttr ".ann" -type "string" "aiAOV_diffuse";
 createNode absOverride -n "enabled2";
 	rename -uid "6D111B43-4338-5623-FEC7-36B76419EC7D";
 	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "enabled";
 	setAttr ".atv" yes;
+	setAttr ".es" yes;
 createNode aovChildCollection -n "specular1";
 	rename -uid "2EB713EE-4EB1-F33E-132E-A0869836DE4A";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode arnoldAOVChildSelector -n "specular1Selector";
 	rename -uid "5C001C0D-4A3F-BB30-72AA-F1AE2EBF00B2";
 	setAttr ".ann" -type "string" "aiAOV_specular";
 createNode absOverride -n "enabled3";
 	rename -uid "FBF8F91F-4814-43E4-ED01-62A464211E31";
 	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "enabled";
 	setAttr ".atv" yes;
+	setAttr ".es" yes;
 createNode absOverride -n "castsShadows";
 	rename -uid "75B5BB72-4748-6CD7-6C7B-1BBD12155D68";
 	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "castsShadows";
+	setAttr ".es" yes;
 createNode collection -n "collection2_shapes";
 	rename -uid "75AFFC26-4143-60FD-0C49-4CA17D260472";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode simpleSelector -n "collection2_shapesSelector";
 	rename -uid "6691D53C-4EB1-FEEA-9B7D-3581E492BF19";
 	setAttr ".pat" -type "string" "*";
@@ -2183,7 +2208,9 @@ createNode simpleSelector -n "collection2_shapesSelector";
 createNode absOverride -n "receiveShadows";
 	rename -uid "7D1769A5-45DA-319D-0F1B-538D325E828C";
 	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "receiveShadows";
+	setAttr ".es" yes;
 createNode renderSetupLayer -n "Combined";
 	rename -uid "231640E2-424F-A75E-EDE6-8593A2E4CB76";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
@@ -2192,11 +2219,15 @@ createNode renderLayer -n "rs_Combined";
 	setAttr ".do" 3;
 createNode collection -n "collection3";
 	rename -uid "D45FCBC5-43BD-FDDE-8D37-619D987E36ED";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode simpleSelector -n "collection3Selector";
 	rename -uid "8235F587-4EE3-B599-7FC6-838E44E2B079";
 	setAttr ".ssl" -type "string" "|Scroll|Geometry";
 createNode aovCollection -n "AOVCollection2";
 	rename -uid "8D3826AE-4476-F958-9F42-3CB82048B786";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode simpleSelector -n "AOVCollection2Selector";
 	rename -uid "C6DCE6E7-40A2-CFA3-91E0-858FFE748646";
 	setAttr ".pat" -type "string" "*";
@@ -2204,34 +2235,32 @@ createNode simpleSelector -n "AOVCollection2Selector";
 	setAttr ".cfv" -type "string" "aiAOV aiAOVDriver aiAOVFilter";
 createNode aovChildCollection -n "ID";
 	rename -uid "7A2DEA3F-4D4F-FED8-B238-5FB1F58AB3F4";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode arnoldAOVChildSelector -n "IDSelector";
 	rename -uid "DCA5B0BF-4147-13C0-CDC8-E2BB06BE26C9";
 	setAttr ".ann" -type "string" "aiAOV_ID";
 createNode absOverride -n "enabled4";
 	rename -uid "E4963480-46E1-8B97-EF4E-B1B7826B57A7";
 	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "enabled";
 	setAttr ".atv" yes;
+	setAttr ".es" yes;
 createNode aovChildCollection -n "Z";
 	rename -uid "ACEE0D2B-47B6-17A0-7C4E-45B8A1D64DB2";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode arnoldAOVChildSelector -n "ZSelector";
 	rename -uid "DE0FD47C-4BCE-F347-CC0C-47B2528A4E17";
 	setAttr ".ann" -type "string" "aiAOV_Z";
 createNode absOverride -n "enabled5";
 	rename -uid "BB53AC28-41D0-47F5-CFA1-CCB2E3D3B0E3";
 	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "enabled";
 	setAttr ".atv" yes;
-createNode aovChildCollection -n "shadow";
-	rename -uid "26454A5B-4E4E-9AD6-44DF-D8BE657424E2";
-createNode arnoldAOVChildSelector -n "shadowSelector";
-	rename -uid "52E6A878-4B90-5CEE-CB41-BB8A787E06FB";
-	setAttr ".ann" -type "string" "aiAOV_shadow";
-createNode absOverride -n "enabled6";
-	rename -uid "13A34B15-4265-E3CF-9702-5B8CC4958D50";
-	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "enabled";
-	setAttr ".atv" yes;
+	setAttr ".es" yes;
 createNode aiAOV -n "aiAOV_AO";
 	rename -uid "838EAEFC-48FC-A66C-6F85-40B93E9374BB";
 	setAttr ".aoven" no;
@@ -2248,13 +2277,13 @@ createNode shadingEngine -n "aiAmbientOcclusion2SG";
 	setAttr ".aovs[1].aov_name" -type "string" "ID";
 	setAttr ".aovs[2].aov_name" -type "string" "Z";
 	setAttr ".aovs[3].aov_name" -type "string" "diffuse";
-	setAttr ".aovs[4].aov_name" -type "string" "shadow";
 	setAttr ".aovs[5].aov_name" -type "string" "specular";
 	setAttr ".aovs[6].aov_name" -type "string" "Alpha";
+	setAttr ".aovs[7].aov_name" -type "string" "shadow_matte";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_AO","aiCustomAOVs[0]","ai_aov_ID"
 		,"aiCustomAOVs[1]","ai_aov_Z","aiCustomAOVs[2]","ai_aov_diffuse","aiCustomAOVs[3]"
 		,"ai_aov_shadow","aiCustomAOVs[4]","ai_aov_specular","aiCustomAOVs[5]","ai_aov_Alpha"
-		,"aiCustomAOVs[6].aovName"} ;
+		,"aiCustomAOVs[6].aovName","ai_aov_shadow_matte","aiCustomAOVs[7].aovName"} ;
 createNode materialInfo -n "materialInfo10";
 	rename -uid "3C4DEC68-4069-59B8-BFEC-299CBA9FC51C";
 createNode aiAOV -n "aiAOV_Alpha";
@@ -2274,34 +2303,60 @@ createNode shadingEngine -n "aiFlat2SG";
 	setAttr ".aovs[2].aov_name" -type "string" "ID";
 	setAttr ".aovs[3].aov_name" -type "string" "Z";
 	setAttr ".aovs[4].aov_name" -type "string" "diffuse";
-	setAttr ".aovs[5].aov_name" -type "string" "shadow";
 	setAttr ".aovs[6].aov_name" -type "string" "specular";
+	setAttr ".aovs[7].aov_name" -type "string" "shadow_matte";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_AO","aiCustomAOVs[0]","ai_aov_Alpha"
 		,"aiCustomAOVs[1]","ai_aov_ID","aiCustomAOVs[2]","ai_aov_Z","aiCustomAOVs[3]","ai_aov_diffuse"
 		,"aiCustomAOVs[4]","ai_aov_shadow","aiCustomAOVs[5]","ai_aov_specular","aiCustomAOVs[6]"
-		} ;
+		,"ai_aov_shadow_matte","aiCustomAOVs[7].aovName"} ;
 createNode materialInfo -n "materialInfo11";
 	rename -uid "91D3FF84-4A2B-80EA-9011-169D1E1A71B7";
 createNode aovChildCollection -n "AO";
 	rename -uid "A259CEDC-4C6A-413F-210B-D9B4440DC5F1";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode arnoldAOVChildSelector -n "AOSelector";
 	rename -uid "5F6EE3C9-4D0A-A866-548B-34A3FD0123F2";
 	setAttr ".ann" -type "string" "aiAOV_AO";
 createNode absOverride -n "enabled7";
 	rename -uid "249CC74C-4C22-0965-267E-F89C6E3FEA67";
 	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "enabled";
 	setAttr ".atv" yes;
+	setAttr ".es" yes;
 createNode aovChildCollection -n "Alpha";
 	rename -uid "E31C03A9-42D4-F1A2-9108-2099C5947EA8";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode arnoldAOVChildSelector -n "AlphaSelector";
 	rename -uid "285BC4BB-4BF6-CFFC-6FC1-B2A2F8437EF6";
 	setAttr ".ann" -type "string" "aiAOV_Alpha";
 createNode absOverride -n "enabled8";
 	rename -uid "CF06E279-4D9D-5DD9-4F44-7889A59928B6";
 	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "enabled";
 	setAttr ".atv" yes;
+	setAttr ".es" yes;
+createNode aiAOV -n "aiAOV_shadow_matte";
+	rename -uid "C70D45F1-4C0F-1F3A-2E5E-91BE94EE534C";
+	setAttr ".aoven" no;
+	setAttr ".aovn" -type "string" "shadow_matte";
+createNode aovChildCollection -n "shadow_matte";
+	rename -uid "D9D36A1D-421A-ED15-A7DA-96B6982E4547";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode arnoldAOVChildSelector -n "shadow_matteSelector";
+	rename -uid "2374FD5E-4C20-5BC3-2183-A7A45DEEB59D";
+	setAttr ".ann" -type "string" "aiAOV_shadow_matte";
+createNode absOverride -n "enabled9";
+	rename -uid "056E682B-49E4-799F-B177-66844590C83E";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+	setAttr ".atv" yes;
+	setAttr ".es" yes;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
@@ -2395,7 +2450,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr -k on ".ro" yes;
-	setAttr -s 13 ".aovs";
+	setAttr -s 14 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "N";
 	setAttr ".aovs[1].aov_name" -type "string" "RGBA";
 	setAttr ".aovs[3].aov_name" -type "string" "albedo";
@@ -2409,10 +2464,11 @@ select -ne :initialShadingGroup;
 	setAttr ".aovs[13].aov_name" -type "string" "shadow";
 	setAttr ".aovs[14].aov_name" -type "string" "AO";
 	setAttr ".aovs[15].aov_name" -type "string" "Alpha";
+	setAttr ".aovs[16].aov_name" -type "string" "shadow_matte";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_N","aiCustomAOVs[0].aovName","ai_aov_specular"
-		,"aiCustomAOVs[10].aovName","ai_aov_shadow_matte","aiCustomAOVs[11]","ai_aov_Z","aiCustomAOVs[11].aovName"
-		,"ai_aov_ID","aiCustomAOVs[12].aovName","ai_aov_shadow","aiCustomAOVs[13].aovName"
-		,"ai_aov_AO","aiCustomAOVs[14].aovName","ai_aov_Alpha","aiCustomAOVs[15].aovName"
+		,"aiCustomAOVs[10].aovName","ai_aov_Z","aiCustomAOVs[11].aovName","ai_aov_ID","aiCustomAOVs[12].aovName"
+		,"ai_aov_shadow","aiCustomAOVs[13].aovName","ai_aov_AO","aiCustomAOVs[14].aovName"
+		,"ai_aov_Alpha","aiCustomAOVs[15].aovName","ai_aov_shadow_matte","aiCustomAOVs[16].aovName"
 		,"ai_aov_RGBA","aiCustomAOVs[1].aovName","ai_aov_albedo","aiCustomAOVs[3].aovName"
 		,"ai_aov_diffuse","aiCustomAOVs[4]","ai_aov_P","aiCustomAOVs[7].aovName","ai_aov_Pref"
 		,"aiCustomAOVs[8].aovName","ai_aov_direct","aiCustomAOVs[9].aovName"} ;
@@ -2430,7 +2486,7 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-	setAttr -s 13 ".aovs";
+	setAttr -s 14 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "N";
 	setAttr ".aovs[1].aov_name" -type "string" "RGBA";
 	setAttr ".aovs[3].aov_name" -type "string" "albedo";
@@ -2444,10 +2500,11 @@ select -ne :initialParticleSE;
 	setAttr ".aovs[13].aov_name" -type "string" "shadow";
 	setAttr ".aovs[14].aov_name" -type "string" "AO";
 	setAttr ".aovs[15].aov_name" -type "string" "Alpha";
+	setAttr ".aovs[16].aov_name" -type "string" "shadow_matte";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_N","aiCustomAOVs[0].aovName","ai_aov_specular"
-		,"aiCustomAOVs[10].aovName","ai_aov_shadow_matte","aiCustomAOVs[11]","ai_aov_Z","aiCustomAOVs[11].aovName"
-		,"ai_aov_ID","aiCustomAOVs[12].aovName","ai_aov_shadow","aiCustomAOVs[13].aovName"
-		,"ai_aov_AO","aiCustomAOVs[14].aovName","ai_aov_Alpha","aiCustomAOVs[15].aovName"
+		,"aiCustomAOVs[10].aovName","ai_aov_Z","aiCustomAOVs[11].aovName","ai_aov_ID","aiCustomAOVs[12].aovName"
+		,"ai_aov_shadow","aiCustomAOVs[13].aovName","ai_aov_AO","aiCustomAOVs[14].aovName"
+		,"ai_aov_Alpha","aiCustomAOVs[15].aovName","ai_aov_shadow_matte","aiCustomAOVs[16].aovName"
 		,"ai_aov_RGBA","aiCustomAOVs[1].aovName","ai_aov_albedo","aiCustomAOVs[3].aovName"
 		,"ai_aov_diffuse","aiCustomAOVs[4]","ai_aov_P","aiCustomAOVs[7].aovName","ai_aov_Pref"
 		,"aiCustomAOVs[8].aovName","ai_aov_direct","aiCustomAOVs[9].aovName"} ;
@@ -2693,9 +2750,9 @@ connectAttr "aiAOV_diffuse.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "aiAOV_specular.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "aiAOV_Z.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "aiAOV_ID.msg" ":defaultArnoldRenderOptions.aovs" -na;
-connectAttr "aiAOV_shadow.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "aiAOV_AO.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "aiAOV_Alpha.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_shadow_matte.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "file1.oc" "Scroll_Shader.base_color";
 connectAttr "file2.oa" "Scroll_Shader.metalness";
 connectAttr "file3.oa" "Scroll_Shader.specular_roughness";
@@ -2937,8 +2994,6 @@ connectAttr ":defaultArnoldDriver.msg" "aiAOV_Z.out[0].drvr";
 connectAttr "aiAOVFilter1.msg" "aiAOV_Z.out[0].ftr";
 connectAttr ":defaultArnoldDriver.msg" "aiAOV_ID.out[0].drvr";
 connectAttr "aiAOVFilter2.msg" "aiAOV_ID.out[0].ftr";
-connectAttr ":defaultArnoldDriver.msg" "aiAOV_shadow.out[0].drvr";
-connectAttr ":defaultArnoldFilter.msg" "aiAOV_shadow.out[0].ftr";
 connectAttr "AOVCollectionSelector.c" "AOVCollection.sel";
 connectAttr "Background.lit" "AOVCollection.pls";
 connectAttr "Background.nic" "AOVCollection.pic";
@@ -3033,7 +3088,7 @@ connectAttr "AOVCollection2Selector.c" "AOVCollection2.sel";
 connectAttr "Combined.lit" "AOVCollection2.pls";
 connectAttr "Combined.nic" "AOVCollection2.pic";
 connectAttr "ID.msg" "AOVCollection2.cl";
-connectAttr "AO.msg" "AOVCollection2.ch";
+connectAttr "shadow_matte.msg" "AOVCollection2.ch";
 connectAttr "IDSelector.c" "ID.sel";
 connectAttr "AOVCollection2.lit" "ID.pls";
 connectAttr "AOVCollection2.en" "ID.pen";
@@ -3053,16 +3108,6 @@ connectAttr "enabled5.msg" "Z.ch";
 connectAttr "AOVCollection2Selector.out" "ZSelector.in";
 connectAttr "Z.lit" "enabled5.pls";
 connectAttr "Z.en" "enabled5.pen";
-connectAttr "shadowSelector.c" "shadow.sel";
-connectAttr "Z.nxt" "shadow.prv";
-connectAttr "AOVCollection2.lit" "shadow.pls";
-connectAttr "AOVCollection2.en" "shadow.pen";
-connectAttr "Combined.nic" "shadow.pic";
-connectAttr "enabled6.msg" "shadow.cl";
-connectAttr "enabled6.msg" "shadow.ch";
-connectAttr "AOVCollection2Selector.out" "shadowSelector.in";
-connectAttr "shadow.lit" "enabled6.pls";
-connectAttr "shadow.en" "enabled6.pen";
 connectAttr ":defaultArnoldDriver.msg" "aiAOV_AO.out[0].drvr";
 connectAttr ":defaultArnoldFilter.msg" "aiAOV_AO.out[0].ftr";
 connectAttr "aiAmbientOcclusion2.out" "aiAOV_AO.dftv";
@@ -3078,7 +3123,7 @@ connectAttr "aiFlat2SG.msg" "materialInfo11.sg";
 connectAttr "aiFlat2.msg" "materialInfo11.m";
 connectAttr "aiFlat2.msg" "materialInfo11.t" -na;
 connectAttr "AOSelector.c" "AO.sel";
-connectAttr "shadow.nxt" "AO.prv";
+connectAttr "Z.nxt" "AO.prv";
 connectAttr "AOVCollection2.lit" "AO.pls";
 connectAttr "AOVCollection2.en" "AO.pen";
 connectAttr "Combined.nic" "AO.pic";
@@ -3097,6 +3142,18 @@ connectAttr "enabled8.msg" "Alpha.ch";
 connectAttr "AOVCollection1Selector.out" "AlphaSelector.in";
 connectAttr "Alpha.lit" "enabled8.pls";
 connectAttr "Alpha.en" "enabled8.pen";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_shadow_matte.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_shadow_matte.out[0].ftr";
+connectAttr "shadow_matteSelector.c" "shadow_matte.sel";
+connectAttr "AO.nxt" "shadow_matte.prv";
+connectAttr "AOVCollection2.lit" "shadow_matte.pls";
+connectAttr "AOVCollection2.en" "shadow_matte.pen";
+connectAttr "Combined.nic" "shadow_matte.pic";
+connectAttr "enabled9.msg" "shadow_matte.cl";
+connectAttr "enabled9.msg" "shadow_matte.ch";
+connectAttr "AOVCollection2Selector.out" "shadow_matteSelector.in";
+connectAttr "shadow_matte.lit" "enabled9.pls";
+connectAttr "shadow_matte.en" "enabled9.pen";
 connectAttr "aiStandardSurface1SG.pa" ":renderPartition.st" -na;
 connectAttr "aiStandardSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "aiShadowMatte1SG.pa" ":renderPartition.st" -na;
