@@ -49,7 +49,7 @@ public class PlayerSideScroller : MonoBehaviour
         // Set the character's Z position to 0
         var transform1 = transform;
         var newPosition = transform1.position;
-        newPosition.z = 0;
+        newPosition.z = 5;
         transform1.position = newPosition;
     }
 

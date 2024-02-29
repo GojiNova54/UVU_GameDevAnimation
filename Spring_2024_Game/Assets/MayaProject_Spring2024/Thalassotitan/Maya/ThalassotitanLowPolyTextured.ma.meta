@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TeethTexture
-    second: {fileID: 9027420975953895797, guid: 4b96261a72d22c54595b68b7f1da98ac, type: 3}
+    second: {fileID: 5459996386629321805, guid: 04c195043ab44544db375f1a64cc6e5e, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
