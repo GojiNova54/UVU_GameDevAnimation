@@ -9,15 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21667c5c1ee7a4111a1243f78270d1dd, type: 3}
-  m_Name: Health
+  m_Script: {fileID: 11500000, guid: 3487b8ded9b132749924b77cd3ed0499, type: 3}
+  m_Name: GemData
   m_EditorClassIdentifier: 
-  value: 0.6
-  minValue: 0
-  maxValue: 1
-  valueOutOfRange:
-    m_PersistentCalls:
-      m_Calls: []
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
+  prefab: {fileID: 2325874505703898794, guid: 303f5d684e31e3f47b061868ff9eb307, type: 3}
+  spawnRate: 1
