@@ -27,11 +27,11 @@ public class Parallax : MonoBehaviour
         
         if (startpos < initialStartPos - length) 
         {
-            startpos += length;
+            startpos += length*2;
         }
         else if (startpos > initialStartPos + length) 
         {
-            startpos -= length;
+            startpos -= length*2;
         }
     }
 }
