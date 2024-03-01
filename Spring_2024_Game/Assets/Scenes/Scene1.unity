@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 101879159}
   - component: {fileID: 101879160}
   m_Layer: 0
-  m_Name: sand (1)
+  m_Name: Mid 06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 101879158}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.655072, y: 0, z: 0}
+  m_LocalPosition: {x: 7.683, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 250693043}
   - component: {fileID: 250693044}
   m_Layer: 0
-  m_Name: foreground-2
+  m_Name: Fore 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -624,7 +624,7 @@ Transform:
   m_GameObject: {fileID: 250693042}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.105069, y: 0, z: 0}
+  m_LocalPosition: {x: 5.1229997, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 261624327}
   - component: {fileID: 261624328}
   m_Layer: 0
-  m_Name: far
+  m_Name: Far 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -708,7 +708,7 @@ Transform:
   m_GameObject: {fileID: 261624326}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.074931, y: 0, z: 0}
+  m_LocalPosition: {x: -5.112, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -911,7 +911,7 @@ GameObject:
   - component: {fileID: 388651703}
   - component: {fileID: 388651704}
   m_Layer: 0
-  m_Name: foreground-1
+  m_Name: Fore 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -926,7 +926,7 @@ Transform:
   m_GameObject: {fileID: 388651702}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.550003, y: 0, z: 0}
+  m_LocalPosition: {x: 2.5600002, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 462044491}
   - component: {fileID: 462044492}
   m_Layer: 0
-  m_Name: sand
+  m_Name: Mid 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1011,15 +1011,15 @@ Transform:
   m_GameObject: {fileID: 462044489}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9.987022}
+  m_LocalPosition: {x: 0.031, y: 0, z: 9.987022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1412803941}
-  - {fileID: 1695865119}
   - {fileID: 101879159}
-  - {fileID: 1235321970}
+  - {fileID: 1695865119}
+  - {fileID: 1412803941}
   - {fileID: 834594868}
+  - {fileID: 1235321970}
   m_Father: {fileID: 895530598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &462044491
@@ -1219,7 +1219,7 @@ Transform:
   m_GameObject: {fileID: 638223961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.42261827, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: -0.17, y: 0, z: 0.21}
+  m_LocalPosition: {x: -3.84, y: 0, z: 4.58}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1455,7 +1455,7 @@ GameObject:
   - component: {fileID: 774883478}
   - component: {fileID: 774883479}
   m_Layer: 0
-  m_Name: far (1)
+  m_Name: Far 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1470,7 +1470,7 @@ Transform:
   m_GameObject: {fileID: 774883477}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.524928, y: 0, z: 0}
+  m_LocalPosition: {x: -2.555928, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1539,7 +1539,7 @@ GameObject:
   - component: {fileID: 834594868}
   - component: {fileID: 834594869}
   m_Layer: 0
-  m_Name: sand (1)
+  m_Name: Mid 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1554,7 +1554,7 @@ Transform:
   m_GameObject: {fileID: 834594867}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.524928, y: 0, z: 0}
+  m_LocalPosition: {x: -2.555928, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1970,7 +1970,7 @@ GameObject:
   - component: {fileID: 1129651042}
   - component: {fileID: 1129651043}
   m_Layer: 0
-  m_Name: foreground-1
+  m_Name: Fore 06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1985,7 +1985,7 @@ Transform:
   m_GameObject: {fileID: 1129651041}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.655072, y: 0, z: 0}
+  m_LocalPosition: {x: 7.683, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2158,7 +2158,7 @@ GameObject:
   - component: {fileID: 1235109687}
   - component: {fileID: 1235109688}
   m_Layer: 0
-  m_Name: foreground-1
+  m_Name: Fore 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2173,7 +2173,7 @@ Transform:
   m_GameObject: {fileID: 1235109686}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.524928, y: 0, z: 0}
+  m_LocalPosition: {x: -2.555928, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2242,7 +2242,7 @@ GameObject:
   - component: {fileID: 1235321970}
   - component: {fileID: 1235321971}
   m_Layer: 0
-  m_Name: sand
+  m_Name: Mid 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2257,7 +2257,7 @@ Transform:
   m_GameObject: {fileID: 1235321969}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.074931, y: 0, z: 0}
+  m_LocalPosition: {x: -5.112, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2326,7 +2326,7 @@ GameObject:
   - component: {fileID: 1238738833}
   - component: {fileID: 1238738834}
   m_Layer: 0
-  m_Name: far (1)
+  m_Name: Far 06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2341,7 +2341,7 @@ Transform:
   m_GameObject: {fileID: 1238738832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.655072, y: 0, z: 0}
+  m_LocalPosition: {x: 7.683, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2410,7 +2410,7 @@ GameObject:
   - component: {fileID: 1412803941}
   - component: {fileID: 1412803942}
   m_Layer: 0
-  m_Name: sand (1)
+  m_Name: Mid 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2425,7 +2425,7 @@ Transform:
   m_GameObject: {fileID: 1412803940}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.550003, y: 0, z: 0}
+  m_LocalPosition: {x: 2.5600002, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2616,7 +2616,7 @@ GameObject:
   - component: {fileID: 1580217301}
   - component: {fileID: 1580217302}
   m_Layer: 0
-  m_Name: foreground-2
+  m_Name: Fore 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2631,15 +2631,15 @@ Transform:
   m_GameObject: {fileID: 1580217299}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9.987022}
+  m_LocalPosition: {x: 0.031, y: 0, z: 9.987022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1916652280}
+  - {fileID: 1235109687}
   - {fileID: 388651703}
   - {fileID: 250693043}
   - {fileID: 1129651042}
-  - {fileID: 1916652280}
-  - {fileID: 1235109687}
   m_Father: {fileID: 895530598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1580217301
@@ -2720,7 +2720,7 @@ GameObject:
   - component: {fileID: 1599008317}
   - component: {fileID: 1599008318}
   m_Layer: 0
-  m_Name: far (1)
+  m_Name: Far 04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2735,7 +2735,7 @@ Transform:
   m_GameObject: {fileID: 1599008316}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.550003, y: 0, z: 0}
+  m_LocalPosition: {x: 2.5600002, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2903,7 +2903,7 @@ GameObject:
   - component: {fileID: 1655569875}
   - component: {fileID: 1655569876}
   m_Layer: 0
-  m_Name: far
+  m_Name: Far 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2918,15 +2918,15 @@ Transform:
   m_GameObject: {fileID: 1655569873}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9.987022}
+  m_LocalPosition: {x: 0.031, y: 0, z: 9.987022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 261624327}
+  - {fileID: 774883478}
   - {fileID: 1599008317}
   - {fileID: 2013237752}
   - {fileID: 1238738833}
-  - {fileID: 261624327}
-  - {fileID: 774883478}
   m_Father: {fileID: 895530598}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1655569875
@@ -3082,7 +3082,7 @@ GameObject:
   - component: {fileID: 1695865119}
   - component: {fileID: 1695865120}
   m_Layer: 0
-  m_Name: sand
+  m_Name: Mid 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3097,7 +3097,7 @@ Transform:
   m_GameObject: {fileID: 1695865118}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.105069, y: 0, z: 0}
+  m_LocalPosition: {x: 5.1229997, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3166,7 +3166,7 @@ GameObject:
   - component: {fileID: 1916652280}
   - component: {fileID: 1916652281}
   m_Layer: 0
-  m_Name: foreground-2
+  m_Name: Fore 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3181,7 +3181,7 @@ Transform:
   m_GameObject: {fileID: 1916652279}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.074931, y: 0, z: 0}
+  m_LocalPosition: {x: -5.112, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3266,7 +3266,7 @@ Transform:
   m_GameObject: {fileID: 1950593648}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.29, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3333,7 +3333,7 @@ GameObject:
   - component: {fileID: 2013237752}
   - component: {fileID: 2013237753}
   m_Layer: 0
-  m_Name: far
+  m_Name: Far 05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3348,7 +3348,7 @@ Transform:
   m_GameObject: {fileID: 2013237751}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.105069, y: 0, z: 0}
+  m_LocalPosition: {x: 5.1229997, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
