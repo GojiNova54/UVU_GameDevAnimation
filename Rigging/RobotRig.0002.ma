@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: RobotRig.0001.ma
-//Last modified: Tue, Apr 02, 2024 09:19:48 PM
+//Name: RobotRig.0002.ma
+//Last modified: Tue, Apr 02, 2024 09:19:59 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.1.1";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "832775E5-4DF3-5BEF-CCC8-EAA986445F8B";
+fileInfo "UUID" "4BD4AFF8-4DAD-4502-3EF2-10B929EBB24B";
 createNode transform -s -n "persp";
 	rename -uid "9C133A12-49D1-2D42-9732-F29C922F5205";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 36.154886540167809 147.17228770746829 687.37075870963747 ;
-	setAttr ".r" -type "double3" -2.7383527313980047 362.99999999801662 1.2441091808382868e-17 ;
+	setAttr ".t" -type "double3" 7.2341501478750985 147.17228770746823 688.27962946466971 ;
+	setAttr ".r" -type "double3" -2.7383527313980061 360.59999999801579 6.2123614899533399e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "43AA893E-4C70-8FC6-827E-08B4FCAB0E02";
 	setAttr -k off ".v" no;
@@ -47522,4 +47522,4 @@ connectAttr "Robot_GeoSG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of RobotRig.0001.ma
+// End of RobotRig.0002.ma
