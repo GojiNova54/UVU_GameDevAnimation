@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: Turtle_Rig.0001.ma
-//Last modified: Tue, Apr 09, 2024 09:23:07 PM
+//Name: Turtle_Rig.0002.ma
+//Last modified: Tue, Apr 09, 2024 09:23:19 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "ngst2SkinLayerData" -dataType "ngst2SkinLayerDataStorage" "ngSkinTools2" "2.1.4";
@@ -15,12 +15,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "7C9FFC61-4C13-4E4F-DF27-86B5B8CECBDE";
+fileInfo "UUID" "E7E1790C-4959-3CA8-ABEF-978AE81D96F1";
 createNode transform -s -n "persp";
 	rename -uid "6599F4CE-42CD-8B3B-9C73-5A9FBD293DC0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 35.492752660165088 6.5955551151505816 17.902314790369111 ;
-	setAttr ".r" -type "double3" -727.20000000002199 -1376.7999999999304 0 ;
+	setAttr ".t" -type "double3" 33.969436947134099 6.1942768318583941 20.72741685270821 ;
+	setAttr ".r" -type "double3" -726.60000000002083 -1381.5999999999283 7.5874051315885908e-16 ;
 	setAttr ".rp" -type "double3" -1.2212453270876722e-15 4.6629367034256575e-15 0 ;
 	setAttr ".rpt" -type "double3" 8.3242279810815088e-14 -7.6900759732978896e-14 1.1681979574178441e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -27550,4 +27550,4 @@ connectAttr "file16.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file17.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file18.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file19.msg" ":defaultTextureList1.tx" -na;
-// End of Turtle_Rig.0001.ma
+// End of Turtle_Rig.0002.ma
