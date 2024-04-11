@@ -21,7 +21,6 @@ public class MonoEventBehaviors : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject); // This makes the data storage object persistent
         awakeEvent.Invoke();
     }
 
