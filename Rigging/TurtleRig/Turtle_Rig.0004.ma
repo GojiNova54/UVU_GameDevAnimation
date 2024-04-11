@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: Turtle_Rig.0003.ma
-//Last modified: Wed, Apr 10, 2024 05:06:47 PM
+//Name: Turtle_Rig.0004.ma
+//Last modified: Wed, Apr 10, 2024 08:01:45 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "ngst2SkinLayerData" -dataType "ngst2SkinLayerDataStorage" "ngSkinTools2" "2.1.4";
@@ -15,12 +15,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "25DB177F-42B6-23A3-AADD-9E92E15BA0A9";
+fileInfo "UUID" "710FBB37-488D-F40A-5BE1-378A5697DD72";
 createNode transform -s -n "persp";
 	rename -uid "6599F4CE-42CD-8B3B-9C73-5A9FBD293DC0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 26.017655630036124 3.1563584316820013 10.72526080811992 ;
-	setAttr ".r" -type "double3" -3.5999999998921073 -2811.1999999997638 5.4969900841764907e-16 ;
+	setAttr ".t" -type "double3" 30.347307172263967 2.0140676246509264 15.966257530843311 ;
+	setAttr ".r" -type "double3" -1.2000000000001041 -2818.4000000003825 0 ;
 	setAttr ".rp" -type "double3" -1.2212453270876722e-15 4.6629367034256575e-15 0 ;
 	setAttr ".rpt" -type "double3" 8.3242279810815088e-14 -7.6900759732978896e-14 1.1681979574178441e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -28,11 +28,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 26.03548855254936;
+	setAttr ".coi" 33.809086615726642;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 1.873948834836483 0.085731267929077148 -4.6515812873840332 ;
+	setAttr ".tp" -type "double3" 8.8817841970012523e-16 0.12086809994173442 4.3218536980014166 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -19918,10 +19918,12 @@ createNode materialInfo -n "materialInfo6";
 	rename -uid "BA0B78AC-4C73-47A7-C5B5-1D917032CC6B";
 createNode displayLayer -n "geo_layer";
 	rename -uid "C78C4212-490B-2D85-FE39-1D8EAACE1E7D";
+	setAttr ".dt" 2;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 2;
 createNode displayLayer -n "skeleton_layer";
 	rename -uid "C08FF0FE-4FF5-1010-2D61-ADBE5DBF7C86";
+	setAttr ".v" no;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode displayLayer -n "controls_layer";
@@ -27272,4 +27274,4 @@ connectAttr "file16.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file17.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file18.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file19.msg" ":defaultTextureList1.tx" -na;
-// End of Turtle_Rig.0003.ma
+// End of Turtle_Rig.0004.ma
