@@ -36,6 +36,7 @@ public class GameOverController : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f; // This resumes the game
+        playerHealth.Value = 1; // Reset player's health to full
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // This reloads the current scene
         gameCanvas.enabled = true; // This enables the GameCanvas
     }

@@ -40,6 +40,8 @@ public class PrefabCoroutineBehavior : MonoBehaviour
             Random.Range(spawnPositionMin.y, spawnPositionMax.y),
             Random.Range(spawnPositionMin.z, spawnPositionMax.z)
         );
+
+        // Instantiate the single prefab
         GameObject instance = Instantiate(prefabData.prefab, spawnPosition, Quaternion.identity);
         StartCoroutine(MovePrefab(instance));
     }
