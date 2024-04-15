@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3487b8ded9b132749924b77cd3ed0499, type: 3}
   m_Name: MineData
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5904992191413162107, guid: a83f6b819b1f9f8469e786906f64ba98, type: 3}
+  prefab: {fileID: 1522205250303299642, guid: 244bf01f4ff36f84ba490b5da7a61d08, type: 3}
   spawnRate: 1

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3487b8ded9b132749924b77cd3ed0499, type: 3}
   m_Name: FishData
   m_EditorClassIdentifier: 
-  prefab: {fileID: 313988132059364587, guid: e7158fde94f8f504ebc95a1acfc974bb, type: 3}
+  prefab: {fileID: 2544644656679817597, guid: 1b3a6e8ddc046724789587f3af9bf3a9, type: 3}
   spawnRate: 0.5
