@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3487b8ded9b132749924b77cd3ed0499, type: 3}
   m_Name: GemData
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2325874505703898794, guid: 303f5d684e31e3f47b061868ff9eb307, type: 3}
+  prefab: {fileID: 3112051297032399522, guid: debbca7788192ef428cf59a9ef9aef54, type: 3}
   spawnRate: 1
