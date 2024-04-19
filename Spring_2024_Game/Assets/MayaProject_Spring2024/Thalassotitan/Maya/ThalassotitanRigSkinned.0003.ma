@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: ThalassotitanRigSkinned.0002.ma
-//Last modified: Thu, Apr 18, 2024 08:10:44 PM
+//Name: ThalassotitanRigSkinned.0003.ma
+//Last modified: Thu, Apr 18, 2024 08:10:51 PM
 //Codeset: 1252
 requires maya "2023";
 requires "stereoCamera" "10.0";
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "47FD4CC5-448B-6CCC-6C34-2395EF8921D3";
+fileInfo "UUID" "83A9C60D-48F3-BACC-C0FA-9F88AFDEFC27";
 createNode transform -s -n "persp";
 	rename -uid "145DA0F8-4A81-9C3B-B5D8-A7801D838955";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1473.5232427845965 182.27778216988361 540.00004507669416 ;
-	setAttr ".r" -type "double3" -363.33835511170605 10873.799999990697 2.1375376832166762e-15 ;
+	setAttr ".t" -type "double3" 1310.0932813074364 149.97714135873429 909.52686532610142 ;
+	setAttr ".r" -type "double3" -362.13835511170254 10856.599999990225 1.8055551544759774e-16 ;
 	setAttr ".rp" -type "double3" 2.4868995751603507e-14 4.4408920985006262e-15 5.6843418860808015e-14 ;
 	setAttr ".rpt" -type "double3" -3.1866688584182087e-14 6.2351014519495218e-15 6.2470673315203429e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -71968,4 +71968,4 @@ connectAttr "file25.msg" ":defaultTextureList1.tx" -na;
 connectAttr "aiAreaLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "aiAreaLight2.iog" ":defaultLightSet.dsm" -na;
 connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
-// End of ThalassotitanRigSkinned.0002.ma
+// End of ThalassotitanRigSkinned.0003.ma
