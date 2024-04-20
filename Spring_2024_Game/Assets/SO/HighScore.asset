@@ -9,9 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb341d657ba3e4f9db95315f691f802a, type: 3}
-  m_Name: SaveDataStorage
+  m_Script: {fileID: 11500000, guid: c6df0c6962af14c60b2d5c35ebd9c64c, type: 3}
+  m_Name: HighScore
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 6d59233bb6fc3504aa47adafe5e4b369, type: 2}
-  listData:
-  - {fileID: 0}
+  value: 0
+  minValue: 0
+  maxValue: 999
+  valueOutOfRange:
+    m_PersistentCalls:
+      m_Calls: []
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls: []

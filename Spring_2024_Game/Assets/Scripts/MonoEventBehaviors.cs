@@ -1,12 +1,12 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class MonoEventBehaviors : MonoBehaviour
 {
     public float holdTime = 0.1f;
-    public UnityEvent onCallEvent, awakeEvent, startEvent, runEvent, disableEvent, destroyEvent, applicationQuitEvent, setActiveEvent, setInactiveEvent;
-    
+    public UnityEvent onCallEvent, awakeEvent, startEvent, runEvent, disableEvent, destroyEvent, applicationQuitEvent, setActiveEvent, setInactiveEvent, onSceneLoadedEvent, onSceneUnloadedEvent;
 
     public void RunOnCall()
     {
@@ -37,24 +37,37 @@ public class MonoEventBehaviors : MonoBehaviour
 
     private void OnDisable()
     {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
         setInactiveEvent.Invoke();
     }
 
     private void OnDestroy()
     {
         destroyEvent.Invoke();
-        
     }
 
     private void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
         setActiveEvent.Invoke();
     }
-    
+
     private void OnApplicationQuit()
     {
         applicationQuitEvent.Invoke();
     }
-    
-   
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        onSceneLoadedEvent.Invoke();
+        // Load your data here
+    }
+
+    private void OnSceneUnloaded(Scene scene)
+    {
+        onSceneUnloadedEvent.Invoke();
+        // Save your data here
+    }
 }
