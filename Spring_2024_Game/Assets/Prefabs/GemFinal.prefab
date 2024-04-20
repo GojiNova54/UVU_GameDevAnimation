@@ -116,10 +116,10 @@ GameObject:
   - component: {fileID: 3798491462166493043}
   - component: {fileID: 2738819327840681522}
   - component: {fileID: 8088987749366008020}
-  - component: {fileID: -1238838936022241236}
+  - component: {fileID: -1952641065557431317}
   m_Layer: 0
   m_Name: GemFinal
-  m_TagString: Untagged
+  m_TagString: Other
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,6 +182,7 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls: []
+  sound: {fileID: 8300000, guid: e093a58d66f2f8646824ee07b888d738, type: 3}
   triggerEnterAction: {fileID: 0}
   triggerEnterRepeatAction: {fileID: 0}
   triggerEnterEndAction: {fileID: 0}
@@ -213,18 +214,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3112051297032399522}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   triggerEnterRepeatEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -233,25 +222,13 @@ MonoBehaviour:
       m_Calls: []
   triggerExitEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -1238838936022241236}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   triggerHoldTime: 0.01
   repeatHoldTime: 0.01
   exitHoldTime: 0.01
   canRepeat: 0
   repeatTimes: 10
---- !u!82 &-1238838936022241236
+--- !u!82 &-1952641065557431317
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,13 +240,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e093a58d66f2f8646824ee07b888d738, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 172
+  Priority: 34
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

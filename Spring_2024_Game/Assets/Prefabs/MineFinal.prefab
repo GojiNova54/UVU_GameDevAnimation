@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8205866215772169614}
   - component: {fileID: 3108358028987060150}
   - component: {fileID: 7036686031741373382}
-  - component: {fileID: -1213520013159637786}
+  - component: {fileID: -631222476373136600}
   m_Layer: 0
   m_Name: MineFinal
-  m_TagString: Untagged
+  m_TagString: Other
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,6 +77,7 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls: []
+  sound: {fileID: 8300000, guid: 6a2f7eed42da400418b61c64d2b5b1ac, type: 3}
   triggerEnterAction: {fileID: 0}
   triggerEnterRepeatAction: {fileID: 0}
   triggerEnterEndAction: {fileID: 0}
@@ -108,18 +109,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1522205250303299642}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   triggerEnterRepeatEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -134,7 +123,7 @@ MonoBehaviour:
   exitHoldTime: 0.01
   canRepeat: 0
   repeatTimes: 10
---- !u!82 &-1213520013159637786
+--- !u!82 &-631222476373136600
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,13 +135,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6a2f7eed42da400418b61c64d2b5b1ac, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 199
+  Priority: 18
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
