@@ -10,6 +10,8 @@ public class PrefabCoroutineBehavior : MonoBehaviour
     public Vector3 spawnPositionMin = new Vector3(10f, -5f, 0f);
     public Vector3 spawnPositionMax = new Vector3(10f, 5f, 0f);
     public float destroyPositionX = -10f;
+    public float spawnRateIncrease = 0.1f; // The amount by which the spawn rate increases every minute
+    public float timeInterval = 60f; // The time interval at which the spawn rate increases
 
     private void Awake()
     {
@@ -21,6 +23,7 @@ public class PrefabCoroutineBehavior : MonoBehaviour
         foreach (PrefabData prefabData in prefabs)
         {
             StartCoroutine(SpawnPrefab(prefabData));
+            StartCoroutine(IncreaseSpawnRate(prefabData));
         }
     }
 
@@ -28,8 +31,17 @@ public class PrefabCoroutineBehavior : MonoBehaviour
     {
         while (true)
         {
-            prefabAction?.Invoke(prefabData);
             yield return new WaitForSeconds(1f / prefabData.spawnRate);
+            prefabAction?.Invoke(prefabData);
+        }
+    }
+
+    private IEnumerator IncreaseSpawnRate(PrefabData prefabData)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(timeInterval);
+            prefabData.spawnRate += spawnRateIncrease;
         }
     }
 

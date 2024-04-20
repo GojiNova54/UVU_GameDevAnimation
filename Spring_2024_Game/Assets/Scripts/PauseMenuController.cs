@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenuController : MonoBehaviour
 {
     public GameObject pauseMenuPanel; // Assign the pause menu panel in the Inspector
+    public FloatData playerHealth; // Reference to the FloatData scriptable object
     private bool isPaused = false;
 
     void Start()
@@ -40,6 +41,7 @@ public class PauseMenuController : MonoBehaviour
     public void GoToMainMenu()
     {
         Time.timeScale = 1f; // This ensures the game isn't still paused when we go back to the main menu
+        playerHealth.Value = 1; // Reset player's health to full
         SceneManager.LoadScene("MainMenu"); // Replace "MainMenu" with the name of your main menu scene
     }
 
