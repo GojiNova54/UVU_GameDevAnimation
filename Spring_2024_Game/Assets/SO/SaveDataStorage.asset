@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb341d657ba3e4f9db95315f691f802a, type: 3}
   m_Name: SaveDataStorage
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 6d59233bb6fc3504aa47adafe5e4b369, type: 2}
+  data: {fileID: 0}
   listData:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 6d59233bb6fc3504aa47adafe5e4b369, type: 2}

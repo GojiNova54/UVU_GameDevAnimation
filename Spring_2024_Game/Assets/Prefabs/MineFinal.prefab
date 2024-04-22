@@ -77,7 +77,8 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls: []
-  sound: {fileID: 8300000, guid: 6a2f7eed42da400418b61c64d2b5b1ac, type: 3}
+  sound: {fileID: 8300000, guid: a43ede855630188429bbe547aed1f170, type: 3}
+  particleEffectPrefab: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   triggerEnterAction: {fileID: 0}
   triggerEnterRepeatAction: {fileID: 0}
   triggerEnterEndAction: {fileID: 0}
@@ -132,8 +133,8 @@ AudioSource:
   m_GameObject: {fileID: 1522205250303299642}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 3c179df373df7fd499e85c861abe46f6, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 6a2f7eed42da400418b61c64d2b5b1ac, type: 3}
+  OutputAudioMixerGroup: {fileID: -6818016859885352566, guid: 3c179df373df7fd499e85c861abe46f6, type: 2}
+  m_audioClip: {fileID: 8300000, guid: a43ede855630188429bbe547aed1f170, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -141,7 +142,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 70
+  Priority: 118
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
