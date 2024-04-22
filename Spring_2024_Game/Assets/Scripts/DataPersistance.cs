@@ -1,32 +1,21 @@
-using UnityEngine;
 using System.IO;
+using UnityEngine;
 
-public class DataPersistenceManager : MonoBehaviour
+public class DataPersistence : MonoBehaviour
 {
-    public ScriptableObject dataToSave; 
+    public ScriptableObject dataToSave;
     private string dataPath;
 
     private void Awake()
     {
         dataPath = Path.Combine(Application.persistentDataPath, "data.json");
+        Debug.Log("Data to save: " + dataToSave);
         LoadData();
-    }
-
-    private void OnApplicationPause(bool pauseStatus)
-    {
-        if (pauseStatus)
-        {
-            SaveData();
-        }
-    }
-
-    private void OnApplicationQuit()
-    {
-        SaveData();
     }
 
     public void SaveData()
     {
+        Debug.Log("Saving data...");
         string jsonData = JsonUtility.ToJson(dataToSave);
         File.WriteAllText(dataPath, jsonData);
         Debug.Log("Data saved to " + dataPath);

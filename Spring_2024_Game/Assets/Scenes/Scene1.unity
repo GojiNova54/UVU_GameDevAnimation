@@ -676,7 +676,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 215948842}
-  - component: {fileID: 215948844}
   - component: {fileID: 215948843}
   m_Layer: 0
   m_Name: DataStorage
@@ -709,29 +708,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 215948840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 782568975867c10488469c6336f85489, type: 3}
+  m_Script: {fileID: 11500000, guid: 2537276e3fe1b9c488cb4122f1b19a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataStorage: {fileID: 11400000, guid: 637f51342934b3e42af23112fd17d8d9, type: 2}
-  saveInterval: 10
---- !u!114 &215948844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215948840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b061ae80357b84941836aa44dbf0ce60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  holdTime: 0.1
+  onCallEvent:
+    m_PersistentCalls:
+      m_Calls: []
   awakeEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 215948843}
-        m_TargetAssemblyTypeName: DataPersistenceManager, Assembly-CSharp
-        m_MethodName: LoadData
+      - m_Target: {fileID: 11400000, guid: 637f51342934b3e42af23112fd17d8d9, type: 2}
+        m_TargetAssemblyTypeName: DataStorage, Assembly-CSharp
+        m_MethodName: LoadAllData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -741,12 +730,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  runEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  disableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
   applicationQuitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 215948843}
-        m_TargetAssemblyTypeName: DataPersistenceManager, Assembly-CSharp
-        m_MethodName: SaveData
+      - m_Target: {fileID: 11400000, guid: 637f51342934b3e42af23112fd17d8d9, type: 2}
+        m_TargetAssemblyTypeName: DataStorage, Assembly-CSharp
+        m_MethodName: SaveAllData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -756,6 +757,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  setActiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  setInactiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onSceneLoadedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onSceneUnloadedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &240065985
 GameObject:
   m_ObjectHideFlags: 0
@@ -3407,6 +3420,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DataPersistence, Assembly-CSharp
+        m_MethodName: SaveData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &956566986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5072,6 +5097,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DataPersistence, Assembly-CSharp
+        m_MethodName: LoadData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1457030141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5735,9 +5772,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1218785864846244882, guid: 3c179df373df7fd499e85c861abe46f6, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b08374b4e44a6384294ed90fff46eae4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b4de16eb590496649967e7fbee877936, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
