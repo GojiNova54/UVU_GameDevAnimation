@@ -7,7 +7,6 @@ public class SettingsController : MonoBehaviour
     public AudioMixer audioMixer;
     public Slider volumeSlider;
     public GameObject settingsPanel; // Reference to the settings panel
-    public IntData dataToReset; 
 
     private void Start()
     {
@@ -27,8 +26,9 @@ public class SettingsController : MonoBehaviour
     }
 
     
-    public void ResetIntData()
+    public void ResetData()
     {
-        dataToReset.Value = 0;
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 }
