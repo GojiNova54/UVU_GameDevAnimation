@@ -16,6 +16,10 @@ public class PrefabCoroutineBehavior : MonoBehaviour
     private void Awake()
     {
         prefabAction = InstantiatePrefab;
+        foreach (PrefabData prefabData in prefabs)
+        {
+            prefabData.initialSpawnRate = prefabData.spawnRate;
+        }
     }
 
     private void Start()
@@ -67,4 +71,12 @@ public class PrefabCoroutineBehavior : MonoBehaviour
         }
         Destroy(prefabInstance);
     }
+    
+    public void ResetSpawnRate()
+    {
+        foreach (PrefabData prefabData in prefabs)
+        {
+            prefabData.spawnRate = prefabData.initialSpawnRate;
+        }
+    }   
 }

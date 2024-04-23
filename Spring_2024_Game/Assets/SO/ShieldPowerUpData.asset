@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ShieldPowerUpData
   m_EditorClassIdentifier: 
   prefab: {fileID: 515976622925729697, guid: 981059ef282536b479bc2bfb1a8860f1, type: 3}
-  spawnRate: 0.6
+  spawnRate: 0.1
+  initialSpawnRate: 0.1

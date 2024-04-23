@@ -5,4 +5,5 @@ public class PrefabData : ScriptableObject
 {
     public GameObject prefab;
     public float spawnRate;
+    public float initialSpawnRate;
 }
