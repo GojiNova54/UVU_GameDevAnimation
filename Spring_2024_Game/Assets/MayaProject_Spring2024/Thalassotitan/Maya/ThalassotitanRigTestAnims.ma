@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: ThalassotitanRigTestAnims.ma
-//Last modified: Tue, Apr 23, 2024 05:05:34 PM
+//Last modified: Tue, Apr 23, 2024 05:43:56 PM
 //Codeset: 1252
 requires maya "2023";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "76E7001C-4644-7D78-3DA1-C4AA5E56DF75";
+fileInfo "UUID" "6A7549FD-4D88-8EC0-5925-6CB1C4D1F693";
 createNode transform -s -n "persp";
 	rename -uid "145DA0F8-4A81-9C3B-B5D8-A7801D838955";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1546.9237008064501 100.70352560944889 368.62160388818842 ;
-	setAttr ".r" -type "double3" -358.53835676321631 12317.800000000383 0 ;
+	setAttr ".t" -type "double3" 1767.214791561229 136.72028742544637 362.31368055564832 ;
+	setAttr ".r" -type "double3" -360.3383567617621 12321.000000000657 0 ;
 	setAttr ".rp" -type "double3" 2.4868995751603507e-14 4.4408920985006262e-15 5.6843418860808015e-14 ;
 	setAttr ".rpt" -type "double3" -3.1866688584182087e-14 6.2351014519495218e-15 6.2470673315203429e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -26,7 +26,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".ncp" 1;
-	setAttr ".coi" 1600.2009767454051;
+	setAttr ".coi" 1822.374035264852;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
