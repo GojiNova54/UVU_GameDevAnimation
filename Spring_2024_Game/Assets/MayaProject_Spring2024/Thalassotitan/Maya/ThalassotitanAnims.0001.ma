@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: ThalassotitanAnims.0001.ma
-//Last modified: Thu, Apr 25, 2024 10:01:27 AM
+//Last modified: Thu, Apr 25, 2024 04:18:47 PM
 //Codeset: 1252
 file -rdi 1 -ns "ThalassotitanRigTestAnims" -rfn "ThalassotitanRigTestAnimsRN"
 		 -op "v=0;" -typ "mayaAscii" "D:/GitRepos/UVU_GameDevAnimation/Spring_2024_Game/Assets/MayaProject_Spring2024//Thalassotitan/Maya/ThalassotitanRigTestAnims.ma";
@@ -15,17 +15,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "3C471CC3-419D-F0E5-A5CF-8F9D36D79201";
+fileInfo "UUID" "1525C03E-4391-3CF7-6775-B2BCC03F7542";
 createNode transform -s -n "persp";
 	rename -uid "4D65F5D3-4175-9B7F-BE30-EEB646A5D092";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -921.65668054736159 79.524721624755315 1021.9984266630073 ;
-	setAttr ".r" -type "double3" 0.2616472834292396 675 -1.7570248306230269e-17 ;
+	setAttr ".t" -type "double3" 1798.250963643128 200.60859206642374 934.64997623335955 ;
+	setAttr ".r" -type "double3" -3.338352716841523 784.19999999999391 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "08A4A15A-48DB-DEC8-2386-C69D2418E116";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1336.8007152005052;
+	setAttr ".coi" 1974.4931569354062;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -84,20 +84,20 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "127C5707-4BE6-B782-8A46-64A590E6B053";
+	rename -uid "D98A8F8A-4722-D01C-B2B0-0BA311034CF5";
 	setAttr -s 11 ".lnk";
 	setAttr -s 11 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D4A77E33-427D-73E9-A3D7-CE91459CF508";
+	rename -uid "64607767-44F9-8072-548D-DC8FBB3E1762";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "193B8F81-43DB-8458-7363-CDA8E9905137";
+	rename -uid "B483EDDC-4FE0-B1CE-C241-C282F24682C1";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "AF851DEF-4706-F832-F051-C9BA8DD24363";
+	rename -uid "1A3AB0ED-4212-1C64-0F92-31A8EFEED712";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "1F932AED-4229-9182-CC78-74A6A9283533";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E74A0E80-490F-C59E-F270-25B079C1B25D";
+	rename -uid "531A9F4B-4CA1-140D-9829-0A8C23AF14BB";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E4D9C970-45F3-A4CF-2C95-5280DB65C5BF";
 	setAttr ".g" yes;
@@ -3107,7 +3107,7 @@ createNode animCurveTA -n "Tongue_02_Ctrl_rotateZ";
 	rename -uid "D207DE27-4FAE-63FB-FD50-BD8A678190DB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  60 0 67 14.24371285026038 70 20.368168565815047
+	setAttr -s 5 ".ktv[0:4]"  60 0 67 14.243712850260382 70 20.368168565815047
 		 75 -5 84 -5;
 createNode animCurveTA -n "Tongue_03_Ctrl_rotateX";
 	rename -uid "BC8F8DEE-44DF-77D3-CC26-EA9DE2A1B3C2";
@@ -3123,7 +3123,7 @@ createNode animCurveTA -n "Tongue_03_Ctrl_rotateZ";
 	rename -uid "03CE2252-441F-120C-25FA-618CF1B692BD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  60 0 67 14.24371285026038 70 20.368168565815047
+	setAttr -s 5 ".ktv[0:4]"  60 0 67 14.243712850260382 70 20.368168565815047
 		 75 -5 84 -5;
 createNode animCurveTA -n "Tongue_04_Ctrl_rotateX";
 	rename -uid "D696B613-42AF-B251-2AB8-4F9A1F78A23E";
