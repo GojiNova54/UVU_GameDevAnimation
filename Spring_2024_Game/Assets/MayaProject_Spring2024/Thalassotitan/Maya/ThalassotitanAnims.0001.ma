@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: ThalassotitanAnims.0001.ma
-//Last modified: Wed, Apr 24, 2024 05:39:39 PM
+//Last modified: Thu, Apr 25, 2024 10:01:27 AM
 //Codeset: 1252
 file -rdi 1 -ns "ThalassotitanRigTestAnims" -rfn "ThalassotitanRigTestAnimsRN"
 		 -op "v=0;" -typ "mayaAscii" "D:/GitRepos/UVU_GameDevAnimation/Spring_2024_Game/Assets/MayaProject_Spring2024//Thalassotitan/Maya/ThalassotitanRigTestAnims.ma";
@@ -15,17 +15,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "7A7B210A-4654-0C7A-F7C9-24A1135C49CB";
+fileInfo "UUID" "3C471CC3-419D-F0E5-A5CF-8F9D36D79201";
 createNode transform -s -n "persp";
 	rename -uid "4D65F5D3-4175-9B7F-BE30-EEB646A5D092";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 762.73160556534833 190.96561418212491 677.79615065887435 ;
-	setAttr ".r" -type "double3" -4.5383527168837592 776.59999999909121 0 ;
+	setAttr ".t" -type "double3" -921.65668054736159 79.524721624755315 1021.9984266630073 ;
+	setAttr ".r" -type "double3" 0.2616472834292396 675 -1.7570248306230269e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "08A4A15A-48DB-DEC8-2386-C69D2418E116";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 995.04217265123975;
+	setAttr ".coi" 1336.8007152005052;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -103,6 +103,7 @@ createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "B2DC15CC-4958-A27C-ADA3-7AB0FDC0855A";
+	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
 	setAttr ".version" -type "string" "5.2.1.1";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "0188BC98-4C62-F0AC-539D-52BF0BCA043C";
@@ -440,7 +441,20 @@ createNode reference -n "ThalassotitanRigTestAnimsRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"ThalassotitanRigTestAnimsRN"
 		"ThalassotitanRigTestAnimsRN" 0
-		"ThalassotitanRigTestAnimsRN" 321
+		"ThalassotitanRigTestAnimsRN" 327
+		2 "|ThalassotitanRigTestAnims:Lights" "visibility" " 0"
+		2 "|ThalassotitanRigTestAnims:Lights|ThalassotitanRigTestAnims:aiAreaLight1" 
+		"translate" " -type \"double3\" 621.05101023163740592 124.41182399015303872 157.2397235929086321"
+		
+		2 "|ThalassotitanRigTestAnims:Lights|ThalassotitanRigTestAnims:aiAreaLight1" 
+		"scale" " -type \"double3\" 147.80143305726437575 147.80143305726437575 147.80143305726437575"
+		
+		2 "|ThalassotitanRigTestAnims:Lights|ThalassotitanRigTestAnims:aiAreaLight1|ThalassotitanRigTestAnims:aiAreaLightShape1" 
+		"intensity" " 5"
+		2 "|ThalassotitanRigTestAnims:Lights|ThalassotitanRigTestAnims:aiAreaLight2|ThalassotitanRigTestAnims:aiAreaLightShape2" 
+		"intensity" " 1"
+		2 "|ThalassotitanRigTestAnims:Lights|ThalassotitanRigTestAnims:aiSkyDomeLight1" 
+		"visibility" " 1"
 		2 "ThalassotitanRigTestAnims:Ctrl_Layer" "visibility" " 1"
 		5 4 "ThalassotitanRigTestAnimsRN" "|ThalassotitanRigTestAnims:Thalassotitan|ThalassotitanRigTestAnims:Controls|ThalassotitanRigTestAnims:Transform_Ctrl_Grp|ThalassotitanRigTestAnims:Transform_Ctrl|ThalassotitanRigTestAnims:COG_Ctrl_Grp|ThalassotitanRigTestAnims:COG_Ctrl|ThalassotitanRigTestAnims:Spine_01_Ctrl_Grp|ThalassotitanRigTestAnims:Spine_01_Ctrl.translateX" 
 		"ThalassotitanRigTestAnimsRN.placeHolderList[1]" ""
@@ -3355,15 +3369,15 @@ select -ne :defaultRenderGlobals;
 	setAttr -av -k on ".esr";
 	setAttr -av -k on ".ors";
 	setAttr -cb on ".sdf";
-	setAttr -av -k on ".outf";
-	setAttr -av -cb on ".imfkey";
+	setAttr -av -k on ".outf" 51;
+	setAttr -av -cb on ".imfkey" -type "string" "exr";
 	setAttr -av -k on ".gama";
 	setAttr -k on ".exrc";
 	setAttr -k on ".expt";
-	setAttr -av -k on ".an";
+	setAttr -av -k on ".an" yes;
 	setAttr -cb on ".ar";
-	setAttr -av -k on ".fs";
-	setAttr -av -k on ".ef";
+	setAttr -av -k on ".fs" 45;
+	setAttr -av -k on ".ef" 84;
 	setAttr -av -k on ".bfs";
 	setAttr -cb on ".me";
 	setAttr -cb on ".se";
@@ -3376,7 +3390,7 @@ select -ne :defaultRenderGlobals;
 	setAttr -cb on ".oft";
 	setAttr -cb on ".umfn";
 	setAttr -cb on ".ufe";
-	setAttr -av -cb on ".pff";
+	setAttr -av -cb on ".pff" yes;
 	setAttr -av -cb on ".peie";
 	setAttr -av -cb on ".ifp";
 	setAttr -k on ".rv";
@@ -3444,11 +3458,11 @@ select -ne :defaultResolution;
 	setAttr -av -k on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -k on ".bnm";
-	setAttr -av -k on ".w";
-	setAttr -av -k on ".h";
+	setAttr -av -k on ".w" 2560;
+	setAttr -av -k on ".h" 1440;
 	setAttr -av -k on ".pa" 1;
 	setAttr -av -k on ".al";
-	setAttr -av -k on ".dar";
+	setAttr -av -k on ".dar" 1.7777777910232544;
 	setAttr -av -k on ".ldar";
 	setAttr -av -k on ".dpi";
 	setAttr -av -k on ".off";
