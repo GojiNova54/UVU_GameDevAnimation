@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: HumanoidAlienRigSkinned.0005.ma
-//Last modified: Mon, Nov 25, 2024 01:11:46 PM
+//Name: HumanoidAlienRigSkinned.0006.ma
+//Last modified: Mon, Nov 25, 2024 01:11:50 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
@@ -14,12 +14,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202405151550-05a853e76d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "AAD94009-4E5D-424C-8BC2-80B3F22A1612";
+fileInfo "UUID" "BA3F3C46-4639-1535-D04D-1CBCBC5B1306";
 createNode transform -s -n "persp";
 	rename -uid "8C13A3F4-4B25-6E20-1A83-0E82920AA7C0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.534976087333928 2.7392154998586191 8.6405945758609519 ;
-	setAttr ".r" -type "double3" -366.59999974682006 -2140.5999999995552 4.215010441427629e-16 ;
+	setAttr ".t" -type "double3" 3.1305325719778563 1.0494167973533479 8.8092129282775069 ;
+	setAttr ".r" -type "double3" -355.79999974681965 -2143.3999999995458 1.0371490398360225e-16 ;
 	setAttr ".rp" -type "double3" 0 2.7755575615628914e-17 0 ;
 	setAttr ".rpt" -type "double3" 8.3984653652469168e-16 -2.9655639648288972e-17 8.8062939548669351e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -220944,4 +220944,4 @@ connectAttr "aiAreaLight4.iog" ":defaultLightSet.dsm" -na;
 connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
 connectAttr "ikSCsolver.msg" ":ikSystem.sol" -na;
-// End of HumanoidAlienRigSkinned.0005.ma
+// End of HumanoidAlienRigSkinned.0006.ma
